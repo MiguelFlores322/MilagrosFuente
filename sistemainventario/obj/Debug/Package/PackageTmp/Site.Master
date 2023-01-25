@@ -1,0 +1,225 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SistemaInventario.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+        .overlay
+        {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: rgba(255, 255, 255, 1);
+        }
+    </style>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class='overlay'>
+    <form id="Form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div>
+        <div class="header">
+            <div class="title">
+                <table cellpadding="0" cellspacing="0" style="table-layout: fixed; width: 99%">
+                    <tr>
+                        <td style="padding-left: 3px; width:100%">
+                            <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <label id="lblNombreEmpresa" style="font-size: 18px; color: White; font-weight: bold">
+                                            grupo cyclone - sgae
+                                        </label>
+                                    </td>
+                                    <td style="padding-left: 20px">
+                                        <label id="lblAlmacen" style="font-size: 14px; color: White; font-weight: bold">
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="padding-right: 10px; width: 30%" align="right">
+                            <table>
+                                <tr>
+                                    <td id="tdImagenMenu" style="width: 40px; height: 41px; padding-top: 1px; padding-left: 3px">
+                                        <img id="imgUsuario" src="../Asset/images/mainuser.png" width="40px" height="40px" style="display: none" />
+                                    </td>
+                                    <td align="left">
+                                        <h1>
+                                            <label id="lblNombreUsuario" style="font-size: 14px">
+                                            </label>
+                                        </h1>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="clear hideSkiplink" style="width: 100%; height: 100%;">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                    IncludeStyleBlock="true" Orientation="Horizontal" Font-Names="Arial" Font-Bold="True">
+                    <Items>
+                        <asp:MenuItem Text="Maestros" Value="1000">
+                            <asp:MenuItem Value="1" Text="Clientes" NavigateUrl="~/Maestros/ClientesMilagros.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="2" Text="Proveedores" NavigateUrl="~/Maestros/Proveedores.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="3" Text="Productos" NavigateUrl="~/Maestros/ProductosMilagrosNuevo.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="4" Text="Almacen Fisico" NavigateUrl="~/Maestros/AlmacenFisico.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="5" Text="Tipo de Cambio" NavigateUrl="~/Maestros/TipoCambio.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="6" Text="Lista Precios" NavigateUrl="~/Maestros/ListaPreciosMilagros.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="7" Text="Mantenimiento Serie" NavigateUrl="~/Maestros/MantenimientoSerie.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="8" Text="Empleados" NavigateUrl="~/Maestros/Vendedores.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="9" Text="Configuracion" NavigateUrl="~/Maestros/Configuracion.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="10" Text="Perfiles" NavigateUrl="~/Maestros/Perfiles.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="11" Text="Empresas" NavigateUrl="~/Maestros/Empresa.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="12" Text="Lista Previa " NavigateUrl="~/Maestros/PrevioListaPreciosMilagros.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="13" Text="Lista Precios Pascana " NavigateUrl="~/Maestros/ListaPreciosPascanaMilagros.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="14" Text="Zona " NavigateUrl="~/Maestros/Zona.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="15" Text="Territorio " NavigateUrl="~/Maestros/Territorio.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="16" Text="Margen de Descuento " NavigateUrl="~/Maestros/MargenDescuento.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="17" Text="Formato de Impresion" NavigateUrl="~/Maestros/FormatoImpresion.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Inventario" Value="2000">
+                            <asp:MenuItem Value="1" Text="Ajuste de Inventario" NavigateUrl="~/Inventario/RegistroAjuste.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="2" Text="Kardex" NavigateUrl="~/Inventario/Kardex.aspx"></asp:MenuItem>
+                            <asp:MenuItem Value="4" Text="Guia de Remision" NavigateUrl="~/Inventario/GuiaRemision.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="5" Text="Nota de Ingreso - Salida" NavigateUrl="~/Inventario/NotaIngresoSalida_Milagros.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Compras" Value="6000">
+                            <asp:MenuItem Value="1" Text="Compras Factura" NavigateUrl="~/Compras/RegistroFacturaCompraMilagros.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="2" Text="Nota Credito" NavigateUrl="~/Compras/NotaCreditoMilagros.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="3" Text="Gastos" NavigateUrl="~/Compras/RegistroGasto.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="4" Text="Validacion de Documentos Sunat" NavigateUrl="~/Compras/SUNAT_ValidezDocumentos.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Ventas" Value="3000">
+                            <asp:MenuItem Value="1" Text="Factura" NavigateUrl="~/Ventas/RegistroFactura.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="2" Text="Boleta" NavigateUrl="~/Ventas/RegistroBoleta.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="3" Text="Proforma" NavigateUrl="~/Ventas/RegistroFacturaMultipleMilagros.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="4" Text="Cotizacion" NavigateUrl="~/Ventas/CotizacionMilagros.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="5" Text="Nota de Credito" NavigateUrl="~/Ventas/RegistroNotaCreditoMilagros.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="6" Text="Nota de Pedido" NavigateUrl="~/Ventas/NotaPedido.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="7" Text="Carga Nota Pedido" NavigateUrl="~/Ventas/Excel.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Cuentas Por Cobrar" Value="4000">
+                            <asp:MenuItem Value="1" Text="Cobranzas" NavigateUrl="~/CuentasPorCobrar/RegistroCobranzas.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="2" Text="Letras" NavigateUrl="~/CuentasPorCobrar/LetrasVentas.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Cuentas Por Pagar" Value="7000">
+                            <asp:MenuItem NavigateUrl="~/CuentasPorPagar/RegistroPagos.aspx" Text="Pagos" Value="1">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CuentasPorPagar/Letras.aspx" Text="Letras" Value="2">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <%--                        <asp:MenuItem Text="Caja Bancos" Value="5000">
+                            <asp:MenuItem Value="1" Text="Comprobante Ingreso" NavigateUrl="~/CajaBanco/ComprobanteIngreso.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="2" Text="Comprobante Egreso" NavigateUrl="~/CajaBanco/ComprobanteEgreso.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="3" Text="Caja Chica" NavigateUrl="~/CajaBanco/CajaChica.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="4" Text="Caja Banco" NavigateUrl="~/CajaBanco/CajaBanco.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>--%>
+                        <asp:MenuItem Text="Reportes" Value="10000">
+                            <asp:MenuItem Value="200" Text="Inventario">
+                                <asp:MenuItem Value="200001" Text="Inventario UNIDADES FISICAS" NavigateUrl="~/Reportes/InventarioUnidadesFisicas.aspx">
+                                </asp:MenuItem>
+                                 <asp:MenuItem Value="200002" Text="Inventario VALORIZADO" NavigateUrl="~/Reportes/InventarioValorizado.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="300" Text="Ventas" NavigateUrl="~/Reportes/Ventas.aspx">
+                                <asp:MenuItem Value="300001" Text="Registro de Ventas" NavigateUrl="~/Reportes/Ventas.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Value="300002" Text="Comisiones" NavigateUrl="~/Reportes/Comisiones.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Value="300003" Text="Estadistico de Ventas Mensuales" NavigateUrl="~/Reportes/ESTADISTICOVENTASMENSUALES.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Value="300004" Text="Registro de Ventas por Medio de Pago" NavigateUrl="~/Reportes/MedioPago.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="400" Text="Compras">
+                                <asp:MenuItem Value="400001" Text="Reporte Compras" NavigateUrl="~/Reportes/Compras.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="500" Text="Contabilidad">
+                                <asp:MenuItem Value="500011" Text="REPORTE VENTAS" NavigateUrl="~/Reportes/VentasContabilidadMilagros.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Value="500012" Text="REPORTE COMPRAS" NavigateUrl="~/Reportes/ComprasContabilidadMilagros.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Value="500013" Text="REPORTE PLE" NavigateUrl="~/Reportes/ReportePLE.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="600" Text="CAJA BANCO">
+                                <asp:MenuItem Value="600001" Text="CAJA BANCO" NavigateUrl="~/Reportes/CajaBanco.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="100" Text="Cuentas Por Cobrar">
+                                <asp:MenuItem Value="100001" Text="REPORTE DE COBRANZA" NavigateUrl="~/Reportes/CXC_Cobranzas.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Value="100002" Text="HISTORIAL COBRANZAS" NavigateUrl="~/Reportes/CXC_HistorialCobranzas.aspx">
+                                </asp:MenuItem>
+                                <%--                                <asp:MenuItem Value="100003" Text="CONSULTA DE CUENTAS POR COBRAR" NavigateUrl="~/Reportes/CobranzasConsultas.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Value="100004" Text="CLIENTES CON DEUDAS Y PAGAN CON LETRAS" NavigateUrl="~/Reportes/ClientesDeudasYLetras.aspx">
+                                </asp:MenuItem>--%>
+                            </asp:MenuItem>
+                            <asp:MenuItem Value="700" Text="Cuentas Por Pagar">
+                                <asp:MenuItem Value="700001" Text="Pagos" NavigateUrl="~/Reportes/CXP_Pagos.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Value="700002" Text="HISTORIAL PAGOS" NavigateUrl="~/Reportes/CXP_HistorialPagos.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+    <div class="main" style="width: 77%; height: 100%;">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+    <div class="clear">
+    </div>
+    </div>
+    <div class="footer">
+    </div>
+    </form>
+</body>
+</html>

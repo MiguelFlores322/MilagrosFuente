@@ -1,0 +1,16 @@
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\bin\SistemaInventario.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\bin\BouncyCastle.Crypto.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\bin\CapaDatos.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\bin\CapaEntidad.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\bin\CapaNegocios.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\bin\EasyCallback.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\bin\EPPlus.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\bin\KeepAutomation.Barcode.Crystal.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\bin\Newtonsoft.Json.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\bin\CapaDatos.pdb
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\bin\CapaEntidad.pdb
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\bin\CapaNegocios.pdb
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\obj\Debug\SistemaInventario.csprojResolveAssemblyReference.cache
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\obj\Debug\SistemaInventario.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\obj\Debug\SistemaInventario.pdb
+D:\TFS\VS2010_MILAGROS\MILAGROS\SistemaInventario\bin\SistemaInventario.pdb

@@ -1,0 +1,7 @@
+D:\TFS\VS2010_MILAGROS\MILAGROS\CapaDatos\bin\Debug\CapaDatos.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\CapaDatos\bin\Debug\CapaDatos.pdb
+D:\TFS\VS2010_MILAGROS\MILAGROS\CapaDatos\bin\Debug\CapaEntidad.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\CapaDatos\bin\Debug\CapaEntidad.pdb
+D:\TFS\VS2010_MILAGROS\MILAGROS\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+D:\TFS\VS2010_MILAGROS\MILAGROS\CapaDatos\obj\Debug\CapaDatos.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\CapaDatos\obj\Debug\CapaDatos.pdb

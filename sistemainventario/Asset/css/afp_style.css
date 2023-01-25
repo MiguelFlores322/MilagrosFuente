@@ -1,0 +1,898 @@
+body {
+	background: #FFFFFF;
+	font-size: 10px;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0000ff;
+}
+
+abbr {
+	cursor: help;
+}
+
+h2 {
+	color: #3868CA;
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h5 {
+	text-align: center;
+	clear: both;
+}
+
+fieldset {
+	width: 96%;
+}
+
+
+p,input,select {
+	font-size: 10px;
+}
+
+textarea {
+	font-size: 10px;
+	overflow: auto;
+}
+
+table {
+	border: 0;
+	background: white;
+}
+
+
+td,th {
+	font-size: 10px;
+}
+
+ul,ul a {
+	font-size: 10px;
+}
+
+#afp-content {
+	height: 100%;
+	width: 98%;
+	margin: auto;
+	padding: 3px;
+	border: 1px solid;
+	background-color: #F9F7ED;
+}
+
+#afp-login {
+	width: 450px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 3px;
+	border: 1px solid #EEEEEE;
+	background-color: #F9F7ED;
+}
+
+#afp-login td.logo{
+	background-image: url("../../asset/images/login_Manager.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100px;
+}
+
+#afp-login th.title{
+	font-size: 20px;
+	font-weight: bold;
+	cursor: move;
+}
+
+#afp-login input.username{
+	font-size: 18px;
+	background-image: url("../../asset/images/icons/user.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+#afp-login input.password{
+	font-size: 18px;
+	background-image: url("../../asset/images/icons/password.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	width: 100%;
+}
+
+#afp-login input.btn{
+	font-size: 14px;
+}
+
+#afp-Legend {
+	width: 98%;
+	margin: auto;
+	height: 25px;
+	background: #EEEEEE;
+	margin-bottom: 10px;
+	padding: 5px;
+	border-right: 1px solid #4297D7;
+	border-left: 1px solid #4297D7;
+	border-bottom: 1px solid #4297D7;
+}
+
+#afp-Calendar {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	/*border: 1px solid #4297D7;*/
+	background-color: #C5DBEC;
+	margin-bottom: 10px;
+}
+
+#afp-Calendar th.nav {
+	height: 35px;
+}
+
+#afp-Calendar td {
+	width: 14%;
+	vertical-align: top;
+}
+#afp-Calendar td.trSemanal {
+	width: 5%;
+	vertical-align: top;
+}
+
+#afp-Calendar .row, #afp-Calendar .cell-none {
+	width:5%;
+	
+ }
+
+#afp-Calendar .row{
+	text-align: center;
+	/*font-weight: bold;
+	color: #6699CC;*/
+	background:#FFF2DD;
+	height: 30px;
+	vertical-align: middle;
+	
+ }
+#afp-Calendar .cell-none {
+	border: none;
+	color: #000000;
+	background: url("../../asset/images/icons/bg_hour.png")
+	
+ }
+
+#afp-Calendar td a.date {
+	padding: 2px;
+/*	border-bottom: 1px dashed  #cccccc;*/
+	cursor: pointer;
+	color:#666666;
+	overflow: hidden;
+}
+ 
+#afp-Calendar td div.date {
+	padding: 2px;
+	border-bottom: 1px dashed  #cccccc;
+	cursor: pointer;
+	color:#666666;
+	overflow: hidden;
+}
+#afp-Calendar td a.date .id{
+	color: #B02B2C;
+	padding-right: 5px;
+}
+#afp-Calendar td div.date .id{
+	color: #B02B2C;
+	padding-right: 5px;
+}
+#afp-Calendar td a.date .status{
+	margin-top: 3px;
+	color: #36393D;
+	display: block;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+}
+#afp-Calendar td div.date .status{
+	margin-top: 3px;
+	color: #36393D;
+	display: block;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+}
+#afp-Calendar td a.date:hover {
+	background: #F1FBFE;
+}
+
+#afp-Calendar td div.date:hover {
+	background: #F1FBFE;
+}
+#afp-Calendar td a.date span.time {
+	height: 16px;
+	width: auto;
+	color: #6699CC;
+	font-weight: bold;
+	padding-right: 5px;
+}
+
+
+#afp-Calendar td div.date span.time {
+	height: 16px;
+	width: auto;
+	color: #6699CC;
+	font-weight: bold;
+	padding-right: 5px;
+}
+
+#afp-Calendar td.week {
+	text-align: center;
+	height: 20px;
+}
+.days span
+{
+	font-size:10px;
+	}
+#afp-Calendar td.days {
+	height: 80px;
+	font-size:10px;
+	padding: 0px;
+	/*background-color: #F9F7ED;
+	clear: both;
+	color: #36393D;*/
+}
+
+#afp-Calendar td.days div .head-day{
+	padding: 2px;
+	border-bottom:solid 1px #FFFFFF;
+	border-top: solid 1px #FFFFFF;
+	border-right: solid 1px #FFFFFF;
+	border-left: solid 1px #FFFFFF;
+	height: 18px;
+	
+}
+	
+
+#afp-Calendar td.days div .head-day .MensajeCita {
+	/*background-image: url("../../asset/images/icons/btn_add_cita.png");*/
+	background: url("../../asset/images/icons/btn_add_cita.png") no-repeat scroll 100% 20%;
+	
+	float: right;
+	width: 70px;
+	height: 12px;
+	padding: 0px 20px 3px 0;
+	font-weight: normal;
+	text-align: right;
+	
+	
+}
+#lblMes,#lblSem { font-size:15px;}
+#afp-Calendar td.days .now
+{
+	width:100%;
+	height: 100%;
+	background: #FFFFCC;	
+	
+}
+#afp-Calendar td.days div .head-day .date_text {
+	/*background: none repeat scroll 0 0 #31BBED;*/
+    border-bottom: solid 1px #6699CC;
+    border-right: solid 1px #6699CC;
+    color: #6699CC; 
+    cursor: pointer;
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
+    height: 14px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    text-align: center;
+    width: 16px;
+	text-align:center;
+}
+
+#afp-Calendar .objectives{
+	clear: both;
+	font-size: 10px;
+	font-style: italic;
+	text-transform: lowercase;
+}
+
+#afp-Calendar td.days div a:hover {
+	height: 18px;
+	font-weight: bold;
+	color: #3F4C6B;
+}
+
+#afp-Calendar td.days div a span {
+	float: left;
+}
+
+#afp-Calendar td.today {
+	height: 80px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #F9F7ED;
+	clear: both;
+}
+
+#afp-Calendar td.today h4 {
+	background-color: #4096EE;
+	height: 16px;
+	margin-bottom: 4px;
+	padding-left: 2px;
+	padding-top: 2px;
+	
+	cursor: pointer;
+}
+
+#afp-Calendar td.today h4:hover {
+	background-color: #257ed9;
+	height: 18px;
+}
+
+img {
+	border: 0;
+}
+
+.tooltip{
+   position: absolute;
+   padding: 2px 5px;
+   z-index: 2;
+   
+   color: #F9F7ED;
+   background-color: #36393D;
+
+   border: 1px solid black;
+   
+   font-family: sans-serif;
+   font-size: 10px;
+
+   width: 200px;
+}
+
+.tooltip h3{
+      margin: 0 0 5px;
+      text-align: left;
+}
+
+.tooltip span{
+	margin-left: 10px;
+	display: block;
+}
+
+.cita_cal {
+	color: #666666;
+	border-top: 1px solid #999999;
+	margin: 1px;
+}
+
+.cita_cal:hover { /*color:#000000;*/
+	color: #3868CA;
+}
+
+#afp-header{
+	width: 98%;
+	height: auto;
+	margin: auto;
+	margin-top: 10px;
+	padding: 5px;
+	height: 60px;
+}
+
+#afp-header div.banner{
+	background-image: url("../../asset/images/afp-logo.png");
+	background-repeat: no-repeat;
+	width: 400px;
+	height: 60px;
+	float: left;
+}
+
+#afp-header div.slogan{
+	margin-top: 30px;
+	float: right;
+	padding: 5px;
+	font-size: 14px;
+}
+
+#afp-header div.version{
+	margin-top: 30px;
+	float: right;
+	padding: 5px;
+	font-size: 14px;
+}
+
+/* Menu */
+
+#afp-menu {
+	width: 98%;
+	margin: auto;
+	height: 25px;
+	background: #EEEEEE;
+	margin-bottom: 10px;
+	padding: 5px;
+	border-right: 1px solid #4297D7;
+	border-left: 1px solid #4297D7;
+	border-bottom: 1px solid #4297D7;
+}
+
+#afp-menu #nav {
+	list-style: none;
+	width: 100%;
+}
+
+#afp-menu #nav ul {
+	width: auto;
+}
+
+#afp-menu #nav li {
+	float: left;
+}
+
+
+
+#afp-menu #nav li a:hover {
+	color: #36393D;
+}
+
+/* Submenu */
+#afp-menu #nav ul.submenu {
+	border: 1px solid #999999;
+	padding: 4px;
+	position: absolute;
+	list-style: none;
+	background-color: #F9F7ED;
+}
+
+#afp-menu #nav ul.submenu li {
+	float: none;
+	border-bottom: 1px solid #999999;
+	width: 200px;
+}
+
+
+
+/* Subsubmenu */
+#afp-menu #nav ul.subsubmenu {
+	border: 1px solid #999999;
+	padding: 4px;
+	position: absolute;
+	list-style: none;
+	background-color: #F9F7ED;
+	margin-left: 150px;
+	margin-top: -30px;
+}
+
+#afp-menu #nav ul.subsubmenu li {
+	float: none;
+	background-image: none;
+	border-bottom: 1px solid #999999;
+	min-width: 200px;
+}
+
+#afp-menu #nav li.date{
+	width: 180px;
+	text-align: center;
+	display: block;
+
+}
+
+#afp-menu #nav li.date select{
+	padding: 3px;
+	background-color: #FFFFFF;
+	border: none;
+	color: #3F4C6B;
+}
+
+
+
+
+
+#afp-menu #nav .change_user{
+	width: 25px;
+	height: 25px;
+	float: right;
+	background-image: url('../../asset/images/icons/change_user.png');
+	background-position: right;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#afp-menu #nav .change_user .ask{
+	display: none;
+}
+
+#afp-permisos {
+	padding: 5px;
+	border: 1px dashed #D3D3D3;
+	display: none;
+	height: 350px;
+	overflow: auto;
+	font-size: 10px;
+}
+
+#afp-permisos ul li:hover{
+	background-color: #E6E6E6;
+}
+
+#afp-permisos ul li ul li:hover{
+	background-color: #BDBDBD;
+}
+
+#afp-permisos ul li ul li ul li:hover{
+	background-color: #A4A4A4;
+}
+
+
+#afp-permisos li{
+	cursor: pointer;
+	padding: 2px;
+	list-style: circle;
+}
+
+#afp-permisos ul li ul li{
+	margin-left: 20px;
+}
+
+#afp-permisos ul li ul li ul li{
+	margin-left: 20px;
+}
+
+#afp-menu #nav .logout{
+	width: 25px;
+	height: 25px;
+	background-color: black;
+	float: right;
+	background-image: url('../../asset/images/calendar/logout.png');
+	background-position: right;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#afp-objetivos {
+	width: 740px;
+	margin: auto;	
+}
+
+#afp-objetivos h4{
+	padding: 3px;
+}
+
+
+.alert-cu{
+	margin: auto;
+	width: 450px;
+	padding: 5px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.alert-cu span{
+	font-weight: bold;
+}
+
+.alert-cu span.close{
+	float: right;
+	cursor: pointer;
+}
+
+.alert{
+	margin: 3px;
+	padding: 3px;
+	
+	text-align: center;
+}
+
+#jquery-alert {
+	display: none;
+}
+
+#jquery-dialog {
+	display: none;
+	clear: both;
+}
+
+/*POr EDuardo ROdriguez Patino for betters practices  xD*/
+#asistente {
+	margin: auto;
+	width: 700px;
+}
+
+#asistente h3{
+	padding: 3px;
+}
+
+#asistente .lbl {
+	display: block;
+}
+
+#jquery-loader {
+	background: url('../../asset/images/ajax-loader.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #EFF5FB;
+	width: 100%;
+	height: 100%;
+	display: block;
+	display: none;
+	position: fixed;
+	z-index: 2000;
+	top: 0;
+	left: 0;
+}
+
+/**Ejecutivos*/
+#lstCliente{
+	margin: auto;
+}
+
+/*ASISTENTE*/
+#asistente .cerrado {
+	padding: 5px;
+}
+
+.advertencia .cerrado span {
+	float: left;
+	margin-right: 10px;
+}
+
+#asistente table th {
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left;
+	width: 150px;
+	font-size: 10px;
+}
+
+#asistente table .th {
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left;
+	width: 250px;
+	font-size: 10px;
+}
+
+#asistente .participantes {
+	display: none;
+	border: 1px solid #A6C9E2;
+	border-top: 10px solid #A6C9E2;
+	margin-top: 5px;
+}
+
+/*CITAS*/
+#citas table th {
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left;
+	width: auto;
+}
+
+#citas .participantes {
+	width: auto;
+}
+
+#citas .participantes span {
+	-moz-border-radius: 3px 3px 3px 3px;
+	background-color: #CEE3F6;
+	border: 1px solid #0174DF;
+	color: #0174DF;
+	display: block;
+	font: 10px Arial, Sans-serif;
+	padding: 3px;
+	width: auto;
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
+
+#citas .participantes span a {
+	color: #666666;
+	font: bold 10px Arial, Sans-serif;
+	text-decoration: none;
+	margin-right: 2px;
+	margin-bottom: 5px;
+	float: right;
+	cursor: pointer;
+}
+
+#citas .tdJoin{
+	padding-top: 5px;
+}
+
+.btnGrande{
+	font-size: 16px;
+}
+
+.comboWrapper {
+	border: 1px solid #D8D8D8;
+	width: auto;
+	height: auto;
+	padding: 3px;
+}
+
+.comboWrapper select {
+	border: none;
+	width: 100%;
+}
+
+.inputWrapper {
+	border: 1px solid #D8D8D8;
+	width: auto;
+	height: auto;
+	padding: 3px;
+}
+
+.inputWrapper input {
+	border: none;
+	width: 100%;
+}
+
+.inputWrapper textarea {
+	border: none;
+	width: 100%;
+}
+
+/*advertencia, para trabajar con los ALERTS-error de jqueryUI, el span es para iconos*/
+.advertencia {
+	padding: 5px;
+}
+
+.advertencia span {
+	float: left;
+	margin-right: 10px;
+}
+
+hr {
+	border: 1px solid #4297D7;
+	margin: 5px;
+}
+
+.separator{
+	clear: both;
+}
+
+.multiSelect{
+	width: 142px;
+}
+
+.icon{
+	cursor: pointer;
+}
+
+.jqgrid{
+	clear: both;
+	border-top: 2px dashed #D3D3D3;
+	padding: 5px;
+}
+
+.block{
+	float: left;
+	width: auto;
+	height: auto;
+	border: 1px solid #D3D3D3;
+	margin: 2px;
+}
+
+.block table{
+	padding: 1px;
+}
+
+.result{
+	float: left;
+	width: 590px;
+	height: auto;
+	border: 1px solid #D3D3D3;
+	margin: 2px;
+
+	display: none;
+}
+
+.block table{
+	width: 100%;
+}
+
+.block table blink{
+	display: block;
+	text-align: center;
+	color: #36393D;
+	font-weight: bold;
+}
+
+.block table .response{
+	display: none;
+}
+
+.block table .response .message{
+	display: block;
+	padding: 3px;
+}
+
+.block table .response .message span{
+	float: right;
+}
+
+
+.cabeza-calendar{
+	text-align:center;
+	height:44px;
+}
+
+.cabeza-calendar .button-navegacion{
+	width:20%; 
+	display:block;
+		float:left;
+		padding: 6px 0;
+}
+.cabeza-calendar .titulo_calendar {
+	width:60%;
+	color: #6699CC;
+		float:left;
+		height:24px;
+		padding-top: 8px;
+	
+}
+
+.NumberSemana
+{ color: #6699CC;
+    font-weight: bold;
+    font-size:20px;  
+    height: 30px;
+    padding-right: 5px;
+    width: auto;  
+    
+ }
+ .panelNumberSemana
+ {
+   padding:5px;    
+ }
+ 
+ .MensajeSemana {
+	/*background-image: url("../../asset/images/icons/btn_add_cita.png");*/
+	background: url("../../asset/images/icons/btn_add_cita.png") no-repeat scroll 100% 20%;
+	
+	float: right;
+	width:70px;	
+	height:20px;
+	padding: 0px 20px 3px 0;
+	font-weight: normal;
+	text-align: right;
+	
+	
+}
+
+#afp-Calendar td a.date span.time1 {
+	color: #6699CC;
+	font-weight: bold;
+	padding-right:5px;
+	
+	
+}
+
+.lblSpace
+{
+padding-right:40px;
+display:block;
+}
+.lblEstado
+{
+padding-right:80px;
+
+}
+
+#afp-Calendar td a.date1 {
+	padding: 2px;
+	border: 1px dashed  #cccccc;
+	cursor: pointer;
+	color:#666666;
+	overflow: hidden;
+}
+
+#afp-Calendar td a.date .id1{
+	color: #B02B2C;
+	padding-right:40px;
+	display:block;
+}

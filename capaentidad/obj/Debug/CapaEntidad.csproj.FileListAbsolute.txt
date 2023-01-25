@@ -1,0 +1,4 @@
+D:\TFS\VS2010_MILAGROS\MILAGROS\CapaEntidad\bin\Debug\CapaEntidad.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\CapaEntidad\bin\Debug\CapaEntidad.pdb
+D:\TFS\VS2010_MILAGROS\MILAGROS\CapaEntidad\obj\Debug\CapaEntidad.dll
+D:\TFS\VS2010_MILAGROS\MILAGROS\CapaEntidad\obj\Debug\CapaEntidad.pdb

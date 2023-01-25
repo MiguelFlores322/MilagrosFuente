@@ -1,0 +1,2699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08372908-E645-40E8-BE3B-845E3E4A984C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaInventario</RootNamespace>
+    <AssemblyName>SistemaInventario</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EasyCallback">
+      <HintPath>..\..\..\ddl\EasyCallback.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\..\ddl\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\TFS_AREA\AAA_BIFURCACIONES\PROYECTOCYCLONE\20180813\1.Desarrollo\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="KeepAutomation.Barcode.Crystal">
+      <HintPath>..\..\..\ddl\KeepAutomation.Barcode.Crystal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\ddl\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\..\Users\Usuario\Desktop\Instaladores\DDL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Asset\css\alertify.bootstrap.css" />
+    <Content Include="Asset\css\alertify.core.css" />
+    <Content Include="Asset\css\alertify.default.css" />
+    <Content Include="Asset\css\bootstrap.min.css" />
+    <Content Include="Asset\css\checkbox.css" />
+    <Content Include="Asset\css\dropzone.css" />
+    <Content Include="Asset\css\font-awesome.min.css" />
+    <Content Include="Asset\css\imagescss.css" />
+    <Content Include="Asset\css\sss.css" />
+    <Content Include="Asset\css\tablefixed.css" />
+    <Content Include="Asset\css\tooltipbutton\.gitignore" />
+    <Content Include="Asset\css\tooltipbutton\Gruntfile.js" />
+    <Content Include="Asset\css\tooltipbutton\jquery.toolbar.css" />
+    <Content Include="Asset\css\tooltipbutton\jquery.toolbar.js" />
+    <Content Include="Asset\css\tooltipbutton\jquery.toolbar.min.js" />
+    <Content Include="Asset\css\tooltipbutton\LICENSE.txt" />
+    <Content Include="Asset\font\fontawesome-webfont.svg" />
+    <Content Include="Asset\font\glyphicons-halflings-regular.svg" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\.gitignore" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\area-as-line.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\area.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\bar-colors.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\bar-no-axes.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\bar.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\days.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\decimal-custom-hover.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\diagonal-xlabels-bar.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\diagonal-xlabels.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\donut-colors.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\donut-formatter.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\donut.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\dst.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\events.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\goals.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\lib\example.css" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\lib\example.js" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\months-no-smooth.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\negative.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\no-grid.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\non-continuous.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\non-date.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\quarters.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\resize.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\stacked_bars.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\timestamps.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\updating.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\weeks.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\years.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\examples\_template.html" />
+    <Content Include="Asset\morris\canvas-toBlob.js" />
+    <Content Include="Asset\morris\FileSaver.min.js" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\Gruntfile.js" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\morris.css" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\morris.js" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\morris.min.js" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\otros\canvg.js" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\otros\canvg.min.js" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\otros\html2canvas.js" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\otros\jspdf.min.js" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\otros\rgbcolor.js" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\otros\stackblur.js" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\raphael-min.js" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\spec\specs.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\spec\viz\examples.js" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\spec\viz\exemplary\area0.png" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\spec\viz\exemplary\bar0.png" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\spec\viz\exemplary\line0.png" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\spec\viz\exemplary\stacked_bar0.png" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\spec\viz\test.html" />
+    <Content Include="Asset\graficos_morris.js-0.5.1\spec\viz\visual_specs.js" />
+    <Content Include="Asset\images\adduser.png" />
+    <Content Include="Asset\images\afp-logo.png" />
+    <Content Include="Asset\images\ajax-loader2.gif" />
+    <Content Include="Asset\images\anulado.jpg" />
+    <Content Include="Asset\images\arr.png" />
+    <Content Include="Asset\images\arrow.png" />
+    <Content Include="Asset\images\btnEdit.gif" />
+    <Content Include="Asset\images\btns.png" />
+    <Content Include="Asset\images\btns_act.png" />
+    <Content Include="Asset\images\calCenter.gif" />
+    <Content Include="Asset\images\calLeft.gif" />
+    <Content Include="Asset\images\calRight.gif" />
+    <Content Include="Asset\images\cancelarx16.png" />
+    <Content Include="Asset\images\excel.gif" />
+    <Content Include="Asset\images\historial.png" />
+    <Content Include="Asset\images\historial2.png" />
+    <Content Include="Asset\images\historial3.png" />
+    <Content Include="Asset\images\historial4.png" />
+    <Content Include="Asset\images\internet_earthx16.png" />
+    <Content Include="Asset\images\logo.png" />
+    <Content Include="Asset\images\Mail1.png" />
+    <Content Include="Asset\images\Mail2.png" />
+    <Content Include="Asset\images\mainuser.png" />
+    <Content Include="Asset\images\nada.png" />
+    <Content Include="Asset\images\poweroff - copia - copia.png" />
+    <Content Include="Asset\images\poweroff - copia.png" />
+    <Content Include="Asset\images\poweroff.png" />
+    <Content Include="Asset\images\poweron - copia.png" />
+    <Content Include="Asset\images\poweron.png" />
+    <Content Include="Asset\images\poweron2.png" />
+    <Content Include="Asset\images\punto.png" />
+    <Content Include="Asset\images\Reemplazo.png" />
+    <Content Include="Asset\images\refresh-icon.png" />
+    <Content Include="Asset\images\simagen1.jpg" />
+    <Content Include="Asset\images\simagen2.jpg" />
+    <Content Include="Asset\images\simagen3.jpg" />
+    <Content Include="Asset\images\simagen4.jpg" />
+    <Content Include="Asset\images\spritemap%402x.png" />
+    <Content Include="Asset\images\spritemap-mini.png" />
+    <Content Include="Asset\images\spritemap.png" />
+    <Content Include="Asset\images\texto.jpg" />
+    <Content Include="Asset\images\Eliminar.jpg" />
+    <Content Include="Asset\images\EliminarBtn.png" />
+    <Content Include="Asset\images\images.jpg" />
+    <Content Include="Asset\images\imprimir.gif" />
+    <Content Include="Asset\images\minus.gif" />
+    <Content Include="Asset\images\pdf.png" />
+    <Content Include="Asset\images\pdf2.png" />
+    <Content Include="Asset\images\plus.gif" />
+    <Content Include="Asset\images\texto.png" />
+    <Content Include="Asset\images\User.png" />
+    <Content Include="Asset\images\View.PNG" />
+    <Content Include="Asset\images\viewx16.png" />
+    <Content Include="Asset\images\viewx24.png" />
+    <Content Include="Asset\js\dropzone.min.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\AUTHORS.txt" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\Gruntfile.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\jquery-1.9.1.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\MIT-LICENSE.txt" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-be.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-fr-CA.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ka.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ky.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-nb.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-nn.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery-ui.custom.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.accordion.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.autocomplete.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.button.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.core.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.datepicker.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.dialog.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.draggable.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.droppable.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-blind.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-bounce.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-clip.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-drop.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-explode.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-fade.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-fold.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-highlight.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-pulsate.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-scale.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-shake.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-slide.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-transfer.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.menu.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.mouse.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.position.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.progressbar.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.resizable.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.selectable.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.slider.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.sortable.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.spinner.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.tabs.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.tooltip.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.widget.js" />
+    <Content Include="Asset\js\jq-ui\1.10.2\index.html" />
+    <Content Include="Asset\js\jquery.min.js" />
+    <Content Include="Asset\js\jquery.timers.js" />
+    <Content Include="Asset\js\sss.js" />
+    <Content Include="Asset\js\sss.min.js" />
+    <Content Include="Asset\js\WaterMark.min.js" />
+    <Content Include="Asset\morris\canvg.js" />
+    <Content Include="Asset\morris\canvg.min.js" />
+    <Content Include="Asset\morris\html2canvas.js" />
+    <Content Include="Asset\morris\jspdf.min.js" />
+    <Content Include="Asset\morris\morris.css" />
+    <Content Include="Asset\morris\morris.esm.js" />
+    <Content Include="Asset\morris\morris.js" />
+    <Content Include="Asset\morris\morris.min.js" />
+    <Content Include="Asset\morris\raphael.min.js" />
+    <Content Include="Asset\morris\rgbcolor.js" />
+    <Content Include="Asset\multiselect-combo\locale\multiple-select-en-US.js" />
+    <Content Include="Asset\multiselect-combo\locale\multiple-select-en-US.min.js" />
+    <Content Include="Asset\multiselect-combo\locale\multiple-select-es-ES.js" />
+    <Content Include="Asset\multiselect-combo\locale\multiple-select-es-ES.min.js" />
+    <Content Include="Asset\multiselect-combo\locale\multiple-select-it-IT.js" />
+    <Content Include="Asset\multiselect-combo\locale\multiple-select-it-IT.min.js" />
+    <Content Include="Asset\multiselect-combo\locale\multiple-select-zh-CN.js" />
+    <Content Include="Asset\multiselect-combo\locale\multiple-select-zh-CN.min.js" />
+    <Content Include="Asset\multiselect-combo\locale\multiple-select-zh-TW.js" />
+    <Content Include="Asset\multiselect-combo\locale\multiple-select-zh-TW.min.js" />
+    <Content Include="Asset\multiselect-combo\multiple-select-es.js" />
+    <Content Include="Asset\multiselect-combo\multiple-select-es.min.js" />
+    <Content Include="Asset\multiselect-combo\multiple-select-locale-all.js" />
+    <Content Include="Asset\multiselect-combo\multiple-select-locale-all.min.js" />
+    <Content Include="Asset\multiselect-combo\multiple-select-vue-es.js" />
+    <Content Include="Asset\multiselect-combo\multiple-select-vue-es.min.js" />
+    <Content Include="Asset\multiselect-combo\multiple-select-vue.js" />
+    <Content Include="Asset\multiselect-combo\multiple-select-vue.min.js" />
+    <Content Include="Asset\multiselect-combo\multiple-select.css" />
+    <Content Include="Asset\multiselect-combo\multiple-select.js" />
+    <Content Include="Asset\multiselect-combo\multiple-select.min.css" />
+    <Content Include="Asset\multiselect-combo\multiple-select.min.js" />
+    <Content Include="Asset\multiselect-combo\multiselectcustom.css" />
+    <Content Include="Asset\multiselect-combo\themes\bootstrap.css" />
+    <Content Include="Asset\multiselect-combo\themes\bootstrap.min.css" />
+    <Content Include="Asset\multiselect-slim-autoc\config.d.ts" />
+    <Content Include="Asset\multiselect-slim-autoc\data.d.ts" />
+    <Content Include="Asset\multiselect-slim-autoc\helper.d.ts" />
+    <Content Include="Asset\multiselect-slim-autoc\index.d.ts" />
+    <Content Include="Asset\multiselect-slim-autoc\select.d.ts" />
+    <Content Include="Asset\multiselect-slim-autoc\slim.d.ts" />
+    <Content Include="Asset\multiselect-slim-autoc\slimcustom.css" />
+    <Content Include="Asset\multiselect-slim-autoc\slimselect.css" />
+    <Content Include="Asset\multiselect-slim-autoc\slimselect.js" />
+    <Content Include="Asset\multiselect-slim-autoc\slimselect.min.css" />
+    <Content Include="Asset\multiselect-slim-autoc\slimselect.min.js" />
+    <Content Include="Asset\toars\toastr.css" />
+    <Content Include="Asset\toars\toastr.min.css" />
+    <Content Include="Asset\toars\toastr.min.js" />
+    <Content Include="CajaBanco\CajaChica.aspx" />
+    <Content Include="CajaBanco\CajaChica.js" />
+    <Content Include="CajaBanco\ComprobanteEgreso.aspx" />
+    <Content Include="CajaBanco\ComprobanteEgreso.js" />
+    <Content Include="CajaBanco\ComprobanteIngreso.aspx" />
+    <Content Include="CajaBanco\ComprobanteIngreso.js" />
+    <Content Include="CajaBanco\CajaBanco.aspx" />
+    <Content Include="CajaBanco\CajaBanco.js" />
+    <Content Include="Compras\NotaCreditoMilagros.aspx" />
+    <Content Include="Compras\NotaCreditoMilagros.js" />
+    <Content Include="Compras\RegistroFacturaCompraMilagros.aspx" />
+    <Content Include="Compras\RegistroFacturaCompraMilagros.js" />
+    <Content Include="Compras\Importaciones.aspx" />
+    <Content Include="Compras\Importaciones.js" />
+    <Content Include="Compras\GuiaCompra.aspx" />
+    <Content Include="Compras\GuiaCompra.js" />
+    <Content Include="CuentasPorCobrar\LetrasVentas.aspx" />
+    <Content Include="CuentasPorCobrar\LetrasVentas.js" />
+    <Content Include="CuentasPorCobrar\RegistroCobranzas.aspx" />
+    <Content Include="CuentasPorCobrar\RegistroCobranzas.js" />
+    <Content Include="CuentasPorCobrar\RegistroRetenciones.aspx" />
+    <Content Include="CuentasPorCobrar\RegistroRetenciones.js" />
+    <Content Include="CuentasPorPagar\RegistroPagos.aspx" />
+    <Content Include="CuentasPorPagar\RegistroPagos.js" />
+    <Content Include="ErrorSession.aspx" />
+    <Content Include="Inventario\NotaIngresoSalida_Milagros.aspx" />
+    <Content Include="Inventario\NotaIngresoSalida_Milagros.js" />
+    <Content Include="Inventario\Transformaciones.aspx" />
+    <Content Include="Inventario\Transformaciones.js" />
+    <Content Include="Inventario\KardexResumido.aspx" />
+    <Content Include="Inventario\KardexResumido.js" />
+    <Content Include="Inventario\NotaIngresoSalida.aspx" />
+    <Content Include="Inventario\NotaIngresoSalida.js" />
+    <Content Include="Maestros\AlmacenFisico.aspx" />
+    <Content Include="Maestros\AlmacenFisico.js" />
+    <Content Include="Maestros\ClientesMilagros.aspx" />
+    <Content Include="Maestros\ClientesMilagros.js" />
+    <Content Include="Maestros\FormatoImpresion.aspx" />
+    <Content Include="Maestros\FormatoImpresion.js" />
+    <Content Include="Maestros\MargenDescuento.aspx" />
+    <Content Include="Maestros\MargenDescuento.js" />
+    <Content Include="Maestros\Territorio.aspx" />
+    <Content Include="Maestros\Territorio.js" />
+    <Content Include="Maestros\Zona.aspx" />
+    <Content Include="Maestros\Zona.js" />
+    <Content Include="Maestros\ListaPreciosPascanaMilagros.aspx" />
+    <Content Include="Maestros\PrevioListaPreciosMilagros.aspx" />
+    <Content Include="Maestros\PrevioListaPreciosMilagros.js" />
+    <Content Include="Maestros\Perfiles.aspx" />
+    <Content Include="Maestros\Perfiles.js" />
+    <Content Include="Maestros\Productos.aspx" />
+    <Content Include="Maestros\Productos.js" />
+    <Content Include="Maestros\ProductosMilagrosNuevo.aspx" />
+    <Content Include="Maestros\ProductosMilagrosNuevo.js" />
+    <Content Include="Maestros\Empresa.aspx" />
+    <Content Include="Maestros\Empresa.js" />
+    <Content Include="Maestros\ListaPreciosMilagros.aspx" />
+    <Content Include="Maestros\ProductosMilagros.aspx" />
+    <Content Include="Maestros\ProductosMilagros.js" />
+    <Content Include="Maestros\MantenimientoPrecios.aspx" />
+    <Content Include="Maestros\MantenimientoPrecios.js" />
+    <Content Include="Compras\ImportacionPrecio.aspx" />
+    <Content Include="Compras\NotaCredito.aspx" />
+    <Content Include="Compras\NotaCredito.js" />
+    <Content Include="Inventario\GuiaRemision.aspx" />
+    <Content Include="Inventario\GuiaRemision.js" />
+    <Content Include="Inventario\Kardex.aspx" />
+    <Content Include="Inventario\Kardex.js" />
+    <Content Include="CuentasPorPagar\Letras.aspx" />
+    <Content Include="CuentasPorPagar\Letras.js" />
+    <Content Include="Compras\OrdenCompra.aspx" />
+    <Content Include="Compras\OrdenCompra.js" />
+    <Content Include="Compras\NotaPedido.aspx" />
+    <Content Include="Compras\NotaPedido.js" />
+    <Content Include="Inventario\RegistroAjuste.aspx" />
+    <Content Include="Inventario\RegistroAjuste.js" />
+    <Content Include="Compras\RegistroFacturaCompra.aspx" />
+    <Content Include="Compras\RegistroFacturaCompra.js" />
+    <Content Include="Compras\RegistroGasto.aspx" />
+    <Content Include="Compras\RegistroGasto.js" />
+    <Content Include="CuentasPorPagar\RegistroPercepciones.aspx" />
+    <Content Include="CuentasPorPagar\RegistroPercepciones.js" />
+    <Content Include="Inicio.aspx" />
+    <Content Include="Inicio.js" />
+    <Content Include="Inventario\ControlInterno.aspx" />
+    <Content Include="Inventario\ControlInterno.js" />
+    <Content Include="Maestros\ActivosFijos.aspx" />
+    <Content Include="Maestros\ActivosFijos.js" />
+    <Content Include="Maestros\Clientes.aspx" />
+    <Content Include="Maestros\Clientes.js" />
+    <Content Include="Maestros\Configuracion.aspx" />
+    <Content Include="Maestros\Configuracion.js" />
+    <Content Include="Maestros\frmPrincipal.aspx" />
+    <Content Include="Maestros\MantenimientoSerie.aspx" />
+    <Content Include="Maestros\MantenimientoSerie.js" />
+    <Content Include="Maestros\Proveedores.aspx" />
+    <Content Include="Maestros\Proveedores.js" />
+    <Content Include="Maestros\TipoCambio.aspx" />
+    <Content Include="Maestros\TipoCambio.js" />
+    <Content Include="Maestros\TipoCambio_OLD.aspx" />
+    <Content Include="Maestros\TipoCambio_OLD.js" />
+    <Content Include="Maestros\Vendedores.aspx" />
+    <Content Include="Maestros\Vendedores.js" />
+    <Content Include="Reportes\Asset\css\afp_style.css" />
+    <Content Include="Reportes\Asset\css\alertify.bootstrap.css" />
+    <Content Include="Reportes\Asset\css\alertify.core.css" />
+    <Content Include="Reportes\Asset\css\alertify.default.css" />
+    <Content Include="Reportes\Asset\css\bootstrap.min.css" />
+    <Content Include="Reportes\Asset\css\calendario_ajax.css" />
+    <Content Include="Reportes\Asset\css\checkbox.css" />
+    <Content Include="Reportes\Asset\css\dropzone.css" />
+    <Content Include="Reportes\Asset\css\font-awesome.min.css" />
+    <Content Include="Reportes\Asset\css\imagescss.css" />
+    <Content Include="Reportes\Asset\css\ModalPopupExtender.css" />
+    <Content Include="Reportes\Asset\css\Redmond\images\animated-overlay.gif" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Reportes\Asset\css\Redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Reportes\Asset\css\Redmond\jquery-ui-1.10.4.custom.css" />
+    <Content Include="Reportes\Asset\css\Redmond\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Reportes\Asset\css\slidertron.css" />
+    <Content Include="Reportes\Asset\css\sss.css" />
+    <Content Include="Reportes\Asset\css\style.css" />
+    <Content Include="Reportes\Asset\css\StyleEstadistico.css" />
+    <Content Include="Reportes\Asset\css\tablefixed.css" />
+    <Content Include="Reportes\Asset\css\tooltipbutton\Gruntfile.js" />
+    <Content Include="Reportes\Asset\css\tooltipbutton\jquery.toolbar.css" />
+    <Content Include="Reportes\Asset\css\tooltipbutton\jquery.toolbar.js" />
+    <Content Include="Reportes\Asset\css\tooltipbutton\jquery.toolbar.min.js" />
+    <Content Include="Reportes\Asset\css\tooltipbutton\LICENSE.txt" />
+    <Content Include="Reportes\Asset\css\ui-lightness\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Reportes\Asset\font\fontawesome-webfont.svg" />
+    <Content Include="Reportes\Asset\font\glyphicons-halflings-regular.svg" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\area-as-line.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\area.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\bar-colors.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\bar-no-axes.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\bar.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\days.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\decimal-custom-hover.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\diagonal-xlabels-bar.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\diagonal-xlabels.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\donut-colors.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\donut-formatter.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\donut.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\dst.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\events.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\goals.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\lib\example.css" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\lib\example.js" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\months-no-smooth.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\negative.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\no-grid.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\non-continuous.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\non-date.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\quarters.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\resize.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\stacked_bars.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\timestamps.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\updating.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\weeks.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\years.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\examples\_template.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\Gruntfile.js" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\morris.css" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\morris.js" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\morris.min.js" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\otros\canvg.js" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\otros\canvg.min.js" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\otros\html2canvas.js" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\otros\jspdf.min.js" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\otros\rgbcolor.js" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\otros\stackblur.js" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\raphael-min.js" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\specs.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\viz\examples.js" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\viz\exemplary\area0.png" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\viz\exemplary\bar0.png" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\viz\exemplary\line0.png" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\viz\exemplary\stacked_bar0.png" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\viz\test.html" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\viz\visual_specs.js" />
+    <Content Include="Reportes\Asset\images\adduser.png" />
+    <Content Include="Reportes\Asset\images\add_small.png" />
+    <Content Include="Reportes\Asset\images\afp-bbva.png" />
+    <Content Include="Reportes\Asset\images\afp-logo.png" />
+    <Content Include="Reportes\Asset\images\ajax-loader.gif" />
+    <Content Include="Reportes\Asset\images\ajax-loader2.gif" />
+    <Content Include="Reportes\Asset\images\ajax-loaderbar.gif" />
+    <Content Include="Reportes\Asset\images\anulado.jpg" />
+    <Content Include="Reportes\Asset\images\arr.png" />
+    <Content Include="Reportes\Asset\images\arrow.png" />
+    <Content Include="Reportes\Asset\images\bg_txt.png" />
+    <Content Include="Reportes\Asset\images\btnEdit.gif" />
+    <Content Include="Reportes\Asset\images\btns.png" />
+    <Content Include="Reportes\Asset\images\btns_act.png" />
+    <Content Include="Reportes\Asset\images\calCenter.gif" />
+    <Content Include="Reportes\Asset\images\calLeft.gif" />
+    <Content Include="Reportes\Asset\images\calRight.gif" />
+    <Content Include="Reportes\Asset\images\calWaiting.gif" />
+    <Content Include="Reportes\Asset\images\cancelarx16.png" />
+    <Content Include="Reportes\Asset\images\casita.gif" />
+    <Content Include="Reportes\Asset\images\Circle_Green.png" />
+    <Content Include="Reportes\Asset\images\Circle_Red.png" />
+    <Content Include="Reportes\Asset\images\Circle_Yellow.png" />
+    <Content Include="Reportes\Asset\images\cross_icon_normal.png" />
+    <Content Include="Reportes\Asset\images\delete.gif" />
+    <Content Include="Reportes\Asset\images\delete.png" />
+    <Content Include="Reportes\Asset\images\Eliminar.jpg" />
+    <Content Include="Reportes\Asset\images\EliminarBtn.png" />
+    <Content Include="Reportes\Asset\images\excel.gif" />
+    <Content Include="Reportes\Asset\images\foto.jpg" />
+    <Content Include="Reportes\Asset\images\Go-Next-32.png" />
+    <Content Include="Reportes\Asset\images\Go-Previous-32.png" />
+    <Content Include="Reportes\Asset\images\header.png" />
+    <Content Include="Reportes\Asset\images\historial.png" />
+    <Content Include="Reportes\Asset\images\historial2.png" />
+    <Content Include="Reportes\Asset\images\historial3.png" />
+    <Content Include="Reportes\Asset\images\historial4.png" />
+    <Content Include="Reportes\Asset\images\images.jpg" />
+    <Content Include="Reportes\Asset\images\imprimir.gif" />
+    <Content Include="Reportes\Asset\images\internet_earthx16.png" />
+    <Content Include="Reportes\Asset\images\loading.gif" />
+    <Content Include="Reportes\Asset\images\login_Manager.png" />
+    <Content Include="Reportes\Asset\images\login_Manager2.png" />
+    <Content Include="Reportes\Asset\images\logo-afp-horizonte.gif" />
+    <Content Include="Reportes\Asset\images\logo.png" />
+    <Content Include="Reportes\Asset\images\logout.gif" />
+    <Content Include="Reportes\Asset\images\Mail1.png" />
+    <Content Include="Reportes\Asset\images\Mail2.png" />
+    <Content Include="Reportes\Asset\images\mainuser.png" />
+    <Content Include="Reportes\Asset\images\minus.gif" />
+    <Content Include="Reportes\Asset\images\nada.png" />
+    <Content Include="Reportes\Asset\images\nav_bg.png" />
+    <Content Include="Reportes\Asset\images\nav_li_bg.png" />
+    <Content Include="Reportes\Asset\images\ok.gif" />
+    <Content Include="Reportes\Asset\images\pdf.png" />
+    <Content Include="Reportes\Asset\images\pdf2.png" />
+    <Content Include="Reportes\Asset\images\persona.jpg" />
+    <Content Include="Reportes\Asset\images\plus.gif" />
+    <Content Include="Reportes\Asset\images\poweroff - copia - copia.png" />
+    <Content Include="Reportes\Asset\images\poweroff - copia.png" />
+    <Content Include="Reportes\Asset\images\poweroff.png" />
+    <Content Include="Reportes\Asset\images\poweron - copia.png" />
+    <Content Include="Reportes\Asset\images\poweron.png" />
+    <Content Include="Reportes\Asset\images\poweron2.png" />
+    <Content Include="Reportes\Asset\images\progress.gif" />
+    <Content Include="Reportes\Asset\images\punto.png" />
+    <Content Include="Reportes\Asset\images\Reemplazo.png" />
+    <Content Include="Reportes\Asset\images\refresh-icon.png" />
+    <Content Include="Reportes\Asset\images\resultset_first.png" />
+    <Content Include="Reportes\Asset\images\resultset_last.png" />
+    <Content Include="Reportes\Asset\images\simagen1.jpg" />
+    <Content Include="Reportes\Asset\images\simagen2.jpg" />
+    <Content Include="Reportes\Asset\images\simagen3.jpg" />
+    <Content Include="Reportes\Asset\images\simagen4.jpg" />
+    <Content Include="Reportes\Asset\images\spritemap%402x.png" />
+    <Content Include="Reportes\Asset\images\spritemap-mini.png" />
+    <Content Include="Reportes\Asset\images\spritemap.png" />
+    <Content Include="Reportes\Asset\images\Stage_BG_btm.png" />
+    <Content Include="Reportes\Asset\images\texto.jpg" />
+    <Content Include="Reportes\Asset\images\texto.png" />
+    <Content Include="Reportes\Asset\images\titlebar_bg.jpg" />
+    <Content Include="Reportes\Asset\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Reportes\Asset\images\User.png" />
+    <Content Include="Reportes\Asset\images\View.PNG" />
+    <Content Include="Reportes\Asset\images\viewx16.png" />
+    <Content Include="Reportes\Asset\images\viewx24.png" />
+    <Content Include="Reportes\Asset\images\_list_close.png" />
+    <Content Include="Reportes\Asset\images\_list_open.png" />
+    <Content Include="Reportes\Asset\js\autoNumeric-1.4.3.js" />
+    <Content Include="Reportes\Asset\js\autoNumeric-1.7.4.js" />
+    <Content Include="Reportes\Asset\js\calendario.js" />
+    <Content Include="Reportes\Asset\js\dropzone.min.js" />
+    <Content Include="Reportes\Asset\js\javascript.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\AUTHORS.txt" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\Gruntfile.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\jquery-1.9.1.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\MIT-LICENSE.txt" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-be.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-fr-CA.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ka.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ky.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-nb.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-nn.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery-ui.custom.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.accordion.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.autocomplete.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.button.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.core.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.datepicker.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.dialog.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.draggable.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.droppable.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-blind.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-bounce.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-clip.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-drop.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-explode.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-fade.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-fold.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-highlight.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-pulsate.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-scale.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-shake.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-slide.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect-transfer.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.effect.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.menu.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.mouse.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.position.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.progressbar.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.resizable.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.selectable.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.slider.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.sortable.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.spinner.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.tabs.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.tooltip.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui\jquery.ui.widget.js" />
+    <Content Include="Reportes\Asset\js\jq-ui\1.10.2\index.html" />
+    <Content Include="Reportes\Asset\js\jquery-1.10.2.js" />
+    <Content Include="Reportes\Asset\js\jquery-ui-1.10.4.custom.js" />
+    <Content Include="Reportes\Asset\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Reportes\Asset\js\jquery.min.js" />
+    <Content Include="Reportes\Asset\js\jquery.multiSelect.js" />
+    <Content Include="Reportes\Asset\js\jquery.slidertron-0.1.js" />
+    <Content Include="Reportes\Asset\js\jquery.timers.js" />
+    <Content Include="Reportes\Asset\js\js.js" />
+    <Content Include="Reportes\Asset\js\json.js" />
+    <Content Include="Reportes\Asset\js\jsWebUserControl.js" />
+    <Content Include="Reportes\Asset\js\mantenimiento.js" />
+    <Content Include="Reportes\Asset\js\menu.js" />
+    <Content Include="Reportes\Asset\js\pngFIx.js" />
+    <Content Include="Reportes\Asset\js\PrintArea.js" />
+    <Content Include="Reportes\Asset\js\sss.js" />
+    <Content Include="Reportes\Asset\js\sss.min.js" />
+    <Content Include="Reportes\Asset\js\WaterMark.min.js" />
+    <Content Include="Reportes\Asset\morris\morris.css" />
+    <Content Include="Reportes\Asset\morris\morris.min.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\locale\multiple-select-en-US.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\locale\multiple-select-en-US.min.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\locale\multiple-select-es-ES.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\locale\multiple-select-es-ES.min.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\locale\multiple-select-it-IT.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\locale\multiple-select-it-IT.min.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\locale\multiple-select-zh-CN.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\locale\multiple-select-zh-CN.min.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\locale\multiple-select-zh-TW.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\locale\multiple-select-zh-TW.min.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\multiple-select-es.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\multiple-select-es.min.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\multiple-select-locale-all.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\multiple-select-locale-all.min.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\multiple-select-vue-es.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\multiple-select-vue-es.min.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\multiple-select-vue.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\multiple-select-vue.min.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\multiple-select.css" />
+    <Content Include="Reportes\Asset\multiselect-combo\multiple-select.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\multiple-select.min.css" />
+    <Content Include="Reportes\Asset\multiselect-combo\multiple-select.min.js" />
+    <Content Include="Reportes\Asset\multiselect-combo\multiselectcustom.css" />
+    <Content Include="Reportes\Asset\multiselect-combo\themes\bootstrap.css" />
+    <Content Include="Reportes\Asset\multiselect-combo\themes\bootstrap.min.css" />
+    <Content Include="Reportes\Asset\multiselect-slim-autoc\config.d.ts" />
+    <Content Include="Reportes\Asset\multiselect-slim-autoc\data.d.ts" />
+    <Content Include="Reportes\Asset\multiselect-slim-autoc\helper.d.ts" />
+    <Content Include="Reportes\Asset\multiselect-slim-autoc\index.d.ts" />
+    <Content Include="Reportes\Asset\multiselect-slim-autoc\select.d.ts" />
+    <Content Include="Reportes\Asset\multiselect-slim-autoc\slim.d.ts" />
+    <Content Include="Reportes\Asset\multiselect-slim-autoc\slimcustom.css" />
+    <Content Include="Reportes\Asset\multiselect-slim-autoc\slimselect.css" />
+    <Content Include="Reportes\Asset\multiselect-slim-autoc\slimselect.js" />
+    <Content Include="Reportes\Asset\multiselect-slim-autoc\slimselect.min.css" />
+    <Content Include="Reportes\Asset\multiselect-slim-autoc\slimselect.min.js" />
+    <Content Include="Reportes\Asset\toars\toastr.css" />
+    <Content Include="Reportes\Asset\toars\toastr.min.css" />
+    <Content Include="Reportes\Asset\toars\toastr.min.js" />
+    <Content Include="Reportes\Cobranzas.aspx" />
+    <Content Include="Reportes\Cobranzas.js" />
+    <Content Include="Reportes\Compras.aspx" />
+    <Content Include="Reportes\Compras.js" />
+    <Content Include="Reportes\ConstruirExcel.aspx" />
+    <Content Include="Reportes\ClientesDeudasYLetras.aspx" />
+    <Content Include="Reportes\ClientesDeudasYLetras.js" />
+    <Content Include="Reportes\ContabilidadVentasMilagros.aspx" />
+    <Content Include="Reportes\ContabilidadVentasMilagros.js" />
+    <Content Include="Reportes\ComprasContabilidadMilagros.aspx" />
+    <Content Include="Reportes\ComprasContabilidadMilagros.js" />
+    <Content Include="Reportes\ESTADISTICOVENTASMENSUALES.js" />
+    <Content Include="Reportes\ESTADISTICOVENTASMENSUALES.ASPX" />
+    <Content Include="Reportes\InventarioValorizado.aspx" />
+    <Content Include="Reportes\InventarioValorizado.js" />
+    <Content Include="Reportes\InventarioUnidadesFisicas.aspx" />
+    <Content Include="Reportes\InventarioUnidadesFisicas.js" />
+    <Content Include="Reportes\CXC_Cobranzas.aspx" />
+    <Content Include="Reportes\CXC_Cobranzas.js" />
+    <Content Include="Reportes\CXC_CuentasPorCobrar.aspx" />
+    <Content Include="Reportes\CXC_CuentasPorCobrar.js" />
+    <Content Include="Reportes\CXC_HistorialCobranzas.aspx" />
+    <Content Include="Reportes\CXC_HistorialCobranzas.js" />
+    <Content Include="Reportes\CXP_HistorialPagos.aspx" />
+    <Content Include="Reportes\CXP_HistorialPagos.js" />
+    <Content Include="Reportes\CXP_Pagos.aspx" />
+    <Content Include="Reportes\CXP_Pagos.js" />
+    <Content Include="Reportes\VentasContabilidadMilagros.aspx" />
+    <Content Include="Reportes\VentasContabilidadMilagros.js" />
+    <Content Include="Reportes\HistorialPagos.aspx" />
+    <Content Include="Reportes\HistorialPagos.js" />
+    <Content Include="Reportes\HistorialCobranzas.aspx" />
+    <Content Include="Reportes\HistorialCobranzas.js" />
+    <Content Include="Reportes\Crystal.aspx" />
+    <Content Include="Reportes\Excel.aspx" />
+    <Content Include="Reportes\HistorialCompraSunat.aspx" />
+    <Content Include="Reportes\HistorialCompraSunat.js" />
+    <Content Include="Reportes\HistorialOC.aspx" />
+    <Content Include="Reportes\HistorialOC.js" />
+    <Content Include="Reportes\CajaBanco.aspx" />
+    <Content Include="Reportes\CajaBanco.js" />
+    <Content Include="Reportes\HistorialVentasSunat.aspx" />
+    <Content Include="Reportes\HistorialVentasSunat.js" />
+    <Content Include="Reportes\Inventario.aspx" />
+    <Content Include="Reportes\Inventario.js" />
+    <Content Include="Reportes\InventarioPeriodo.aspx" />
+    <Content Include="Reportes\InventarioPeriodo.js" />
+    <Content Include="Reportes\KardexSunat.aspx" />
+    <Content Include="Reportes\KardexSunat.js" />
+    <Content Include="Reportes\Pagos.aspx" />
+    <Content Include="Reportes\Pagos.js" />
+    <Content Include="Reportes\CobranzasConsultas.aspx" />
+    <Content Include="Reportes\CobranzasConsultas.js" />
+    <Content Include="Reportes\RegistroVentas.aspx" />
+    <Content Include="Reportes\RegistroVentas.js" />
+    <Content Include="Reportes\Ventas.aspx" />
+    <Content Include="Reportes\Ventas.js" />
+    <Content Include="Reportes\Comisiones.aspx" />
+    <Content Include="Reportes\Comisiones.js" />
+    <Content Include="Reportes\VentasPorUnidades.aspx" />
+    <Content Include="Reportes\VentasPorUnidades.js" />
+    <Content Include="Reportes\Web_Pagina_Crystal.aspx" />
+    <Content Include="Salir.aspx" />
+    <Content Include="Scripts\alertify.js" />
+    <Content Include="Scripts\alertify.min.js" />
+    <Content Include="Scripts\inputatajos\ejemplo.js" />
+    <Content Include="Scripts\inputatajos\jquery.shortcuts.min.js" />
+    <Content Include="Scripts\inputatajos\kibo.js" />
+    <Content Include="Scripts\inputatajos\kibo.min.js" />
+    <Content Include="Scripts\utilitarios.js" />
+    <Content Include="Servicios\Seguridad.asmx" />
+    <Content Include="Servicios\Servicios.asmx" />
+    <Content Include="Asset\css\afp_style.css" />
+    <Content Include="Asset\css\calendario_ajax.css" />
+    <Content Include="Asset\css\ModalPopupExtender.css" />
+    <Content Include="Asset\css\Redmond\images\animated-overlay.gif" />
+    <Content Include="Asset\css\Redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Asset\css\Redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Asset\css\Redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Asset\css\Redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Asset\css\Redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Asset\css\Redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Asset\css\Redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Asset\css\Redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Asset\css\Redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Asset\css\Redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Asset\css\Redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Asset\css\Redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Asset\css\Redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Asset\css\Redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Asset\css\Redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Asset\css\Redmond\jquery-ui-1.10.4.custom.css" />
+    <Content Include="Asset\css\Redmond\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Asset\css\slidertron.css" />
+    <Content Include="Asset\css\style.css" />
+    <Content Include="Asset\css\StyleEstadistico.css" />
+    <Content Include="Asset\css\ui-lightness\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Asset\images\add_small.png" />
+    <Content Include="Asset\images\afp-bbva.png" />
+    <Content Include="Asset\images\ajax-loader.gif" />
+    <Content Include="Asset\images\ajax-loaderbar.gif" />
+    <Content Include="Asset\images\bg_txt.png" />
+    <Content Include="Asset\images\calWaiting.gif" />
+    <Content Include="Asset\images\casita.gif" />
+    <Content Include="Asset\images\Circle_Green.png" />
+    <Content Include="Asset\images\Circle_Red.png" />
+    <Content Include="Asset\images\Circle_Yellow.png" />
+    <Content Include="Asset\images\cross_icon_normal.png" />
+    <Content Include="Asset\images\delete.gif" />
+    <Content Include="Asset\images\delete.png" />
+    <Content Include="Asset\images\foto.jpg" />
+    <Content Include="Asset\images\Go-Next-32.png" />
+    <Content Include="Asset\images\Go-Previous-32.png" />
+    <Content Include="Asset\images\header.png" />
+    <Content Include="Asset\images\loading.gif" />
+    <Content Include="Asset\images\login_Manager.png" />
+    <Content Include="Asset\images\login_Manager2.png" />
+    <Content Include="Asset\images\logo-afp-horizonte.gif" />
+    <Content Include="Asset\images\logout.gif" />
+    <Content Include="Asset\images\nav_bg.png" />
+    <Content Include="Asset\images\nav_li_bg.png" />
+    <Content Include="Asset\images\ok.gif" />
+    <Content Include="Asset\images\persona.jpg" />
+    <Content Include="Asset\images\progress.gif" />
+    <Content Include="Asset\images\resultset_first.png" />
+    <Content Include="Asset\images\resultset_last.png" />
+    <Content Include="Asset\images\Stage_BG_btm.png" />
+    <Content Include="Asset\images\titlebar_bg.jpg" />
+    <Content Include="Asset\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Asset\images\_list_close.png" />
+    <Content Include="Asset\images\_list_open.png" />
+    <Content Include="Asset\js\autoNumeric-1.4.3.js" />
+    <Content Include="Asset\js\autoNumeric-1.7.4.js" />
+    <Content Include="Asset\js\calendario.js" />
+    <Content Include="Asset\js\javascript.js" />
+    <Content Include="Asset\js\jquery-1.10.2.js" />
+    <Content Include="Asset\js\jquery-ui-1.10.4.custom.js" />
+    <Content Include="Asset\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Asset\js\jquery.multiSelect.js" />
+    <Content Include="Asset\js\jquery.slidertron-0.1.js" />
+    <Content Include="Asset\js\js.js" />
+    <Content Include="Asset\js\json.js" />
+    <Content Include="Asset\js\jsWebUserControl.js" />
+    <Content Include="Asset\js\mantenimiento.js" />
+    <Content Include="Asset\js\menu.js" />
+    <Content Include="Asset\js\pngFIx.js" />
+    <Content Include="Asset\js\PrintArea.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Maestros\AnulacionDocumento.aspx" />
+    <Content Include="Maestros\AnulacionDocumento.js" />
+    <Content Include="Ventas\CargaNotaPedido.aspx" />
+    <Content Include="Ventas\CargaNotaPedido.js" />
+    <Content Include="Ventas\RegistroFacturaMultipleMilagros.aspx" />
+    <Content Include="Ventas\RegistroFacturaMultipleMilagros.js" />
+    <Content Include="Ventas\CotizacionMilagros.aspx" />
+    <Content Include="Ventas\CotizacionMilagros.js" />
+    <Content Include="Ventas\RegistroBoletaMilagros.aspx" />
+    <Content Include="Ventas\RegistroBoletaMilagros.js" />
+    <Content Include="Ventas\RegistroFacturaMilagros.aspx" />
+    <Content Include="Ventas\RegistroFacturaMilagros.js" />
+    <Content Include="Ventas\RegistroNotaVentaMilagros.aspx" />
+    <Content Include="Ventas\RegistroNotaVentaMilagros.js" />
+    <Content Include="Ventas\Excel.aspx" />
+    <Content Include="Ventas\NotaPedido.js" />
+    <Content Include="Ventas\NotaPedido.aspx" />
+    <Content Include="Ventas\Cotizacion.aspx" />
+    <Content Include="Ventas\Cotizacion.js" />
+    <Content Include="Ventas\OrdenCompraVenta.aspx" />
+    <Content Include="Ventas\OrdenCompraVenta.js" />
+    <Content Include="Ventas\RegistroBoleta.aspx" />
+    <Content Include="Ventas\RegistroBoleta.js" />
+    <Content Include="Ventas\RegistroFactura.aspx" />
+    <Content Include="Ventas\RegistroFactura.js" />
+    <Content Include="Ventas\RegistroNotaCredito.aspx" />
+    <Content Include="Ventas\RegistroNotaCredito.js" />
+    <Content Include="Ventas\RegistroNotaVenta.aspx" />
+    <Content Include="Ventas\RegistroNotaVenta.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\dsReportes.cs">
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </Content>
+    <Compile Include="CajaBanco\CajaChica.aspx.cs">
+      <DependentUpon>CajaChica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CajaBanco\CajaChica.aspx.designer.cs">
+      <DependentUpon>CajaChica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CajaBanco\ComprobanteEgreso.aspx.cs">
+      <DependentUpon>ComprobanteEgreso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CajaBanco\ComprobanteEgreso.aspx.designer.cs">
+      <DependentUpon>ComprobanteEgreso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CajaBanco\ComprobanteIngreso.aspx.cs">
+      <DependentUpon>ComprobanteIngreso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CajaBanco\ComprobanteIngreso.aspx.designer.cs">
+      <DependentUpon>ComprobanteIngreso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CajaBanco\CajaBanco.aspx.cs">
+      <DependentUpon>CajaBanco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CajaBanco\CajaBanco.aspx.designer.cs">
+      <DependentUpon>CajaBanco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\NotaCreditoMilagros.aspx.cs">
+      <DependentUpon>NotaCreditoMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\NotaCreditoMilagros.aspx.designer.cs">
+      <DependentUpon>NotaCreditoMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\RegistroFacturaCompraMilagros.aspx.cs">
+      <DependentUpon>RegistroFacturaCompraMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\RegistroFacturaCompraMilagros.aspx.designer.cs">
+      <DependentUpon>RegistroFacturaCompraMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Importaciones.aspx.cs">
+      <DependentUpon>Importaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\Importaciones.aspx.designer.cs">
+      <DependentUpon>Importaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\GuiaCompra.aspx.cs">
+      <DependentUpon>GuiaCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\GuiaCompra.aspx.designer.cs">
+      <DependentUpon>GuiaCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasPorCobrar\LetrasVentas.aspx.cs">
+      <DependentUpon>LetrasVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CuentasPorCobrar\LetrasVentas.aspx.designer.cs">
+      <DependentUpon>LetrasVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasPorCobrar\RegistroCobranzas.aspx.cs">
+      <DependentUpon>RegistroCobranzas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CuentasPorCobrar\RegistroCobranzas.aspx.designer.cs">
+      <DependentUpon>RegistroCobranzas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasPorCobrar\RegistroRetenciones.aspx.cs">
+      <DependentUpon>RegistroRetenciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CuentasPorCobrar\RegistroRetenciones.aspx.designer.cs">
+      <DependentUpon>RegistroRetenciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasPorPagar\RegistroPagos.aspx.cs">
+      <DependentUpon>RegistroPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CuentasPorPagar\RegistroPagos.aspx.designer.cs">
+      <DependentUpon>RegistroPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Digitalizacion\FileDocDB.ashx.cs">
+      <DependentUpon>FileDocDB.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Digitalizacion\FileUpLoadDB.ashx.cs">
+      <DependentUpon>FileUpLoadDB.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorSession.aspx.cs">
+      <DependentUpon>ErrorSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorSession.aspx.designer.cs">
+      <DependentUpon>ErrorSession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\NotaIngresoSalida_Milagros.aspx.cs">
+      <DependentUpon>NotaIngresoSalida_Milagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventario\NotaIngresoSalida_Milagros.aspx.designer.cs">
+      <DependentUpon>NotaIngresoSalida_Milagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Transformaciones.aspx.cs">
+      <DependentUpon>Transformaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventario\Transformaciones.aspx.designer.cs">
+      <DependentUpon>Transformaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\KardexResumido.aspx.cs">
+      <DependentUpon>KardexResumido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventario\KardexResumido.aspx.designer.cs">
+      <DependentUpon>KardexResumido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\NotaIngresoSalida.aspx.cs">
+      <DependentUpon>NotaIngresoSalida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventario\NotaIngresoSalida.aspx.designer.cs">
+      <DependentUpon>NotaIngresoSalida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\AlmacenFisico.aspx.cs">
+      <DependentUpon>AlmacenFisico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\AlmacenFisico.aspx.designer.cs">
+      <DependentUpon>AlmacenFisico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\ClientesMilagros.aspx.cs">
+      <DependentUpon>ClientesMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\ClientesMilagros.aspx.designer.cs">
+      <DependentUpon>ClientesMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\FormatoImpresion.aspx.cs">
+      <DependentUpon>FormatoImpresion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\FormatoImpresion.aspx.designer.cs">
+      <DependentUpon>FormatoImpresion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MargenDescuento.aspx.cs">
+      <DependentUpon>MargenDescuento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\MargenDescuento.aspx.designer.cs">
+      <DependentUpon>MargenDescuento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\Territorio.aspx.cs">
+      <DependentUpon>Territorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\Territorio.aspx.designer.cs">
+      <DependentUpon>Territorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\Zona.aspx.cs">
+      <DependentUpon>Zona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\Zona.aspx.designer.cs">
+      <DependentUpon>Zona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\ListaPreciosPascanaMilagros.aspx.cs">
+      <DependentUpon>ListaPreciosPascanaMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\ListaPreciosPascanaMilagros.aspx.designer.cs">
+      <DependentUpon>ListaPreciosPascanaMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\PrevioListaPreciosMilagros.aspx.cs">
+      <DependentUpon>PrevioListaPreciosMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\PrevioListaPreciosMilagros.aspx.designer.cs">
+      <DependentUpon>PrevioListaPreciosMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\Perfiles.aspx.cs">
+      <DependentUpon>Perfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\Perfiles.aspx.designer.cs">
+      <DependentUpon>Perfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\Productos.aspx.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\Productos.aspx.designer.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\ProductosMilagrosNuevo.aspx.cs">
+      <DependentUpon>ProductosMilagrosNuevo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\ProductosMilagrosNuevo.aspx.designer.cs">
+      <DependentUpon>ProductosMilagrosNuevo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\Empresa.aspx.cs">
+      <DependentUpon>Empresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\Empresa.aspx.designer.cs">
+      <DependentUpon>Empresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\ListaPreciosMilagros.aspx.cs">
+      <DependentUpon>ListaPreciosMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\ListaPreciosMilagros.aspx.designer.cs">
+      <DependentUpon>ListaPreciosMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\ProductosMilagros.aspx.cs">
+      <DependentUpon>ProductosMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\ProductosMilagros.aspx.designer.cs">
+      <DependentUpon>ProductosMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MantenimientoPrecios.aspx.cs">
+      <DependentUpon>MantenimientoPrecios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\MantenimientoPrecios.aspx.designer.cs">
+      <DependentUpon>MantenimientoPrecios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\ImportacionPrecio.aspx.cs">
+      <DependentUpon>ImportacionPrecio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\ImportacionPrecio.aspx.designer.cs">
+      <DependentUpon>ImportacionPrecio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\NotaCredito.aspx.cs">
+      <DependentUpon>NotaCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\NotaCredito.aspx.designer.cs">
+      <DependentUpon>NotaCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\OrdenCompra.aspx.cs">
+      <DependentUpon>OrdenCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\OrdenCompra.aspx.designer.cs">
+      <DependentUpon>OrdenCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasPorPagar\RegistroPercepciones.aspx.cs">
+      <DependentUpon>RegistroPercepciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CuentasPorPagar\RegistroPercepciones.aspx.designer.cs">
+      <DependentUpon>RegistroPercepciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\GuiaRemision.aspx.cs">
+      <DependentUpon>GuiaRemision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventario\GuiaRemision.aspx.designer.cs">
+      <DependentUpon>GuiaRemision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\NotaPedido.aspx.cs">
+      <DependentUpon>NotaPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\NotaPedido.aspx.designer.cs">
+      <DependentUpon>NotaPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\ControlInterno.aspx.cs">
+      <DependentUpon>ControlInterno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventario\ControlInterno.aspx.designer.cs">
+      <DependentUpon>ControlInterno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\ActivosFijos.aspx.cs">
+      <DependentUpon>ActivosFijos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\ActivosFijos.aspx.designer.cs">
+      <DependentUpon>ActivosFijos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\Configuracion.aspx.cs">
+      <DependentUpon>Configuracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\Configuracion.aspx.designer.cs">
+      <DependentUpon>Configuracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MantenimientoSerie.aspx.cs">
+      <DependentUpon>MantenimientoSerie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\MantenimientoSerie.aspx.designer.cs">
+      <DependentUpon>MantenimientoSerie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\TipoCambio.aspx.cs">
+      <DependentUpon>TipoCambio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\TipoCambio.aspx.designer.cs">
+      <DependentUpon>TipoCambio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\Vendedores.aspx.cs">
+      <DependentUpon>Vendedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\Vendedores.aspx.designer.cs">
+      <DependentUpon>Vendedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ContabilidadVentasMilagros.aspx.cs">
+      <DependentUpon>ContabilidadVentasMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ContabilidadVentasMilagros.aspx.designer.cs">
+      <DependentUpon>ContabilidadVentasMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ComprasContabilidadMilagros.aspx.cs">
+      <DependentUpon>ComprasContabilidadMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ComprasContabilidadMilagros.aspx.designer.cs">
+      <DependentUpon>ComprasContabilidadMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ESTADISTICOVENTASMENSUALES.ASPX.cs">
+      <DependentUpon>ESTADISTICOVENTASMENSUALES.ASPX</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ESTADISTICOVENTASMENSUALES.ASPX.designer.cs">
+      <DependentUpon>ESTADISTICOVENTASMENSUALES.ASPX</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\InventarioValorizado.aspx.cs">
+      <DependentUpon>InventarioValorizado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\InventarioValorizado.aspx.designer.cs">
+      <DependentUpon>InventarioValorizado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\InventarioUnidadesFisicas.aspx.cs">
+      <DependentUpon>InventarioUnidadesFisicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\InventarioUnidadesFisicas.aspx.designer.cs">
+      <DependentUpon>InventarioUnidadesFisicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\CXC_Cobranzas.aspx.cs">
+      <DependentUpon>CXC_Cobranzas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\CXC_Cobranzas.aspx.designer.cs">
+      <DependentUpon>CXC_Cobranzas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\CXC_CuentasPorCobrar.aspx.cs">
+      <DependentUpon>CXC_CuentasPorCobrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\CXC_CuentasPorCobrar.aspx.designer.cs">
+      <DependentUpon>CXC_CuentasPorCobrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\CXC_HistorialCobranzas.aspx.cs">
+      <DependentUpon>CXC_HistorialCobranzas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\CXC_HistorialCobranzas.aspx.designer.cs">
+      <DependentUpon>CXC_HistorialCobranzas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\CXP_HistorialPagos.aspx.cs">
+      <DependentUpon>CXP_HistorialPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\CXP_HistorialPagos.aspx.designer.cs">
+      <DependentUpon>CXP_HistorialPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\CXP_Pagos.aspx.cs">
+      <DependentUpon>CXP_Pagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\CXP_Pagos.aspx.designer.cs">
+      <DependentUpon>CXP_Pagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VentasContabilidadMilagros.aspx.cs">
+      <DependentUpon>VentasContabilidadMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\VentasContabilidadMilagros.aspx.designer.cs">
+      <DependentUpon>VentasContabilidadMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptFacturaImpresionTicketNV_Sticker.cs">
+      <DependentUpon>rptFacturaImpresionTicketNV_Sticker.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\rptNotaIngresoSalidaTicket.cs">
+      <DependentUpon>rptNotaIngresoSalidaTicket.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\rptClientesDeudasYLetras.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptClientesDeudasYLetras.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Compras.aspx.cs">
+      <DependentUpon>Compras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Compras.aspx.designer.cs">
+      <DependentUpon>Compras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ConstruirExcel.aspx.cs">
+      <DependentUpon>ConstruirExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ConstruirExcel.aspx.designer.cs">
+      <DependentUpon>ConstruirExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\CobranzasConsultas.aspx.cs">
+      <DependentUpon>CobranzasConsultas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\CobranzasConsultas.aspx.designer.cs">
+      <DependentUpon>CobranzasConsultas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ClientesDeudasYLetras.aspx.cs">
+      <DependentUpon>ClientesDeudasYLetras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ClientesDeudasYLetras.aspx.designer.cs">
+      <DependentUpon>ClientesDeudasYLetras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptCobradosDetalladoGeneral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCobradosDetalladoGeneral.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptElectronica.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptElectronica.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptElectronicaBO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptElectronicaBO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptElectronicaNC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptElectronicaNC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptGuiaRemisionMilagros.cs">
+      <DependentUpon>rptGuiaRemisionMilagros.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\rptCotizacionMilagros.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCotizacionMilagros.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptElectronicaBOMilagros.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptElectronicaBOMilagros.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptElectronicaMilagros.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptElectronicaMilagros.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptElectronicaNCMilagros.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptElectronicaNCMilagros.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptFacturaCompra.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturaCompra.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptFacturaImpresionTicketCT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturaImpresionTicketCT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptFacturaImpresionTicketNV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturaImpresionTicketNV.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptNotaIngresoSalida.cs">
+      <DependentUpon>rptNotaIngresoSalida.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\RegistroVentas.aspx.cs">
+      <DependentUpon>RegistroVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\RegistroVentas.aspx.designer.cs">
+      <DependentUpon>RegistroVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptCobradosDetallado.cs">
+      <DependentUpon>rptCobradosDetallado.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\rptFacturaImpresionGRANDE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturaImpresionGRANDE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptFacturaImpresionTicket.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturaImpresionTicket.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptFacturaImpresionTicketNV_Original.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturaImpresionTicketNV_Original.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptGuiaRemision.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGuiaRemision.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptGuiaRemisionImpresionGRANDE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGuiaRemisionImpresionGRANDE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptGuiaRemisionNotaIngresoSalida.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGuiaRemisionNotaIngresoSalida.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptMovimientoCaja.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMovimientoCaja.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptPagos.cs">
+      <DependentUpon>rptPagos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\HistorialPagos.aspx.cs">
+      <DependentUpon>HistorialPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\HistorialPagos.aspx.designer.cs">
+      <DependentUpon>HistorialPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\HistorialCobranzas.aspx.cs">
+      <DependentUpon>HistorialCobranzas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\HistorialCobranzas.aspx.designer.cs">
+      <DependentUpon>HistorialCobranzas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptCobradosResumido.cs">
+      <DependentUpon>rptCobradosResumido.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\rptGuiaRemisionImpresion.cs">
+      <DependentUpon>rptGuiaRemisionImpresion.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\rptComprasReporte.cs">
+      <DependentUpon>rptComprasReporte.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\rptBoletaImpresion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBoletaImpresion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Cobranzas.aspx.cs">
+      <DependentUpon>Cobranzas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Cobranzas.aspx.designer.cs">
+      <DependentUpon>Cobranzas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptComisiones.cs">
+      <DependentUpon>rptComisiones.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\rptNotaPedidoSimple.cs">
+      <DependentUpon>rptNotaPedidoSimple.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\rptNotaPedido.cs">
+      <DependentUpon>rptNotaPedido.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\rptControlInterno.cs">
+      <DependentUpon>rptControlInterno.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\HistorialCompraSunat.aspx.cs">
+      <DependentUpon>HistorialCompraSunat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\HistorialCompraSunat.aspx.designer.cs">
+      <DependentUpon>HistorialCompraSunat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\HistorialOC.aspx.cs">
+      <DependentUpon>HistorialOC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\HistorialOC.aspx.designer.cs">
+      <DependentUpon>HistorialOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\CajaBanco.aspx.cs">
+      <DependentUpon>CajaBanco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\CajaBanco.aspx.designer.cs">
+      <DependentUpon>CajaBanco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\HistorialVentasSunat.aspx.cs">
+      <DependentUpon>HistorialVentasSunat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\HistorialVentasSunat.aspx.designer.cs">
+      <DependentUpon>HistorialVentasSunat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Pagos.aspx.cs">
+      <DependentUpon>Pagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Pagos.aspx.designer.cs">
+      <DependentUpon>Pagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptCajaChica.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCajaChica.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptCajaChicaDetalle.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCajaChicaDetalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptChequeImpresionBcp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptChequeImpresionBcp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptChequeImpresionScotiabank.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptChequeImpresionScotiabank.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptCobranzas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCobranzas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\InventarioPeriodo.aspx.cs">
+      <DependentUpon>InventarioPeriodo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\InventarioPeriodo.aspx.designer.cs">
+      <DependentUpon>InventarioPeriodo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\KardexSunat.aspx.cs">
+      <DependentUpon>KardexSunat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\KardexSunat.aspx.designer.cs">
+      <DependentUpon>KardexSunat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptComprobanteCancelacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptComprobanteCancelacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptComprobanteImpresion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptComprobanteImpresion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptCotizacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCotizacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptCotizacionSimple.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCotizacionSimple.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptFacturaImpresion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFacturaImpresion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptHistorialOC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptHistorialOC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptInventarioUnidadesFisicas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInventarioUnidadesFisicas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Maestros\AnulacionDocumento.aspx.cs">
+      <DependentUpon>AnulacionDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\AnulacionDocumento.aspx.designer.cs">
+      <DependentUpon>AnulacionDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptLetraImpresion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLetraImpresion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptNotaVenta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNotaVenta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptProforma.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProforma.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptProformaMilagros.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProformaMilagros.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptReporteViaje.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptReporteViaje.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptStickers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptStickers.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptVentasDiarias.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptVentasDiarias.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptVentasUnidades.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptVentasUnidades.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptVistaPreliminarFactura.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptVistaPreliminarFactura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas.aspx.cs">
+      <DependentUpon>Ventas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas.aspx.designer.cs">
+      <DependentUpon>Ventas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Comisiones.aspx.cs">
+      <DependentUpon>Comisiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Comisiones.aspx.designer.cs">
+      <DependentUpon>Comisiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VentasPorUnidades.aspx.cs">
+      <DependentUpon>VentasPorUnidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\VentasPorUnidades.aspx.designer.cs">
+      <DependentUpon>VentasPorUnidades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptVentasReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptVentasReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Web_Pagina_Crystal.aspx.cs">
+      <DependentUpon>Web_Pagina_Crystal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Web_Pagina_Crystal.aspx.designer.cs">
+      <DependentUpon>Web_Pagina_Crystal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Web_Reporte_Cobranzas_rptCobradosDetallado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Web_Reporte_Cobranzas_rptCobradosDetallado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Web_Reporte_Cobranzas_rptCobradosResumido.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Web_Reporte_Cobranzas_rptCobradosResumido.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Web_Reporte_Cobranzas_rptCobranzasGrupal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Web_Reporte_Cobranzas_rptCobranzasGrupal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Web_Reporte_Cobranzas_rptCobranzasUnitario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Web_Reporte_Cobranzas_rptCobranzasUnitario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Web_Reporte_Pagos_rptPagos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Web_Reporte_Pagos_rptPagos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Salir.aspx.cs">
+      <DependentUpon>Salir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Salir.aspx.designer.cs">
+      <DependentUpon>Salir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\Utilitarios.cs" />
+    <Compile Include="Servicios\CargaArchivo.ashx.cs">
+      <DependentUpon>CargaArchivo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios\Seguridad.asmx.cs">
+      <DependentUpon>Seguridad.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ventas\CargaNotaPedido.aspx.cs">
+      <DependentUpon>CargaNotaPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\CargaNotaPedido.aspx.designer.cs">
+      <DependentUpon>CargaNotaPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\RegistroFacturaMultipleMilagros.aspx.cs">
+      <DependentUpon>RegistroFacturaMultipleMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\RegistroFacturaMultipleMilagros.aspx.designer.cs">
+      <DependentUpon>RegistroFacturaMultipleMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\CotizacionMilagros.aspx.cs">
+      <DependentUpon>CotizacionMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\CotizacionMilagros.aspx.designer.cs">
+      <DependentUpon>CotizacionMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\RegistroBoletaMilagros.aspx.cs">
+      <DependentUpon>RegistroBoletaMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\RegistroBoletaMilagros.aspx.designer.cs">
+      <DependentUpon>RegistroBoletaMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\RegistroFacturaMilagros.aspx.cs">
+      <DependentUpon>RegistroFacturaMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\RegistroFacturaMilagros.aspx.designer.cs">
+      <DependentUpon>RegistroFacturaMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\RegistroNotaVentaMilagros.aspx.cs">
+      <DependentUpon>RegistroNotaVentaMilagros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\RegistroNotaVentaMilagros.aspx.designer.cs">
+      <DependentUpon>RegistroNotaVentaMilagros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Excel.aspx.cs">
+      <DependentUpon>Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\Excel.aspx.designer.cs">
+      <DependentUpon>Excel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\NotaPedido.aspx.cs">
+      <DependentUpon>NotaPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\NotaPedido.aspx.designer.cs">
+      <DependentUpon>NotaPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Cotizacion.aspx.cs">
+      <DependentUpon>Cotizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\Cotizacion.aspx.designer.cs">
+      <DependentUpon>Cotizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\OrdenCompraVenta.aspx.cs">
+      <DependentUpon>OrdenCompraVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\OrdenCompraVenta.aspx.designer.cs">
+      <DependentUpon>OrdenCompraVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\RegistroNotaVenta.aspx.cs">
+      <DependentUpon>RegistroNotaVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\RegistroNotaVenta.aspx.designer.cs">
+      <DependentUpon>RegistroNotaVenta.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\dsReportes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </Content>
+    <Compile Include="Clases\JsonSerializer.cs" />
+    <Compile Include="Clases\Mod_Utilitario.cs" />
+    <Compile Include="Inventario\Kardex.aspx.cs">
+      <DependentUpon>Kardex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventario\Kardex.aspx.designer.cs">
+      <DependentUpon>Kardex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasPorPagar\Letras.aspx.cs">
+      <DependentUpon>Letras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CuentasPorPagar\Letras.aspx.designer.cs">
+      <DependentUpon>Letras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\RegistroAjuste.aspx.cs">
+      <DependentUpon>RegistroAjuste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventario\RegistroAjuste.aspx.designer.cs">
+      <DependentUpon>RegistroAjuste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\RegistroFacturaCompra.aspx.cs">
+      <DependentUpon>RegistroFacturaCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\RegistroFacturaCompra.aspx.designer.cs">
+      <DependentUpon>RegistroFacturaCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\RegistroGasto.aspx.cs">
+      <DependentUpon>RegistroGasto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\RegistroGasto.aspx.designer.cs">
+      <DependentUpon>RegistroGasto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\Clientes.aspx.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\Clientes.aspx.designer.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\frmPrincipal.aspx.cs">
+      <DependentUpon>frmPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\frmPrincipal.aspx.designer.cs">
+      <DependentUpon>frmPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\Proveedores.aspx.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\Proveedores.aspx.designer.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\TipoCambio_OLD.aspx.cs">
+      <DependentUpon>TipoCambio_OLD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestros\TipoCambio_OLD.aspx.designer.cs">
+      <DependentUpon>TipoCambio_OLD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Crystal.aspx.cs">
+      <DependentUpon>Crystal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Crystal.aspx.designer.cs">
+      <DependentUpon>Crystal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Excel.aspx.cs">
+      <DependentUpon>Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Excel.aspx.designer.cs">
+      <DependentUpon>Excel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Inventario.aspx.cs">
+      <DependentUpon>Inventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Inventario.aspx.designer.cs">
+      <DependentUpon>Inventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios\Servicios.asmx.cs">
+      <DependentUpon>Servicios.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\RegistroBoleta.aspx.cs">
+      <DependentUpon>RegistroBoleta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\RegistroBoleta.aspx.designer.cs">
+      <DependentUpon>RegistroBoleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\RegistroFactura.aspx.cs">
+      <DependentUpon>RegistroFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\RegistroFactura.aspx.designer.cs">
+      <DependentUpon>RegistroFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\RegistroNotaCredito.aspx.cs">
+      <DependentUpon>RegistroNotaCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\RegistroNotaCredito.aspx.designer.cs">
+      <DependentUpon>RegistroNotaCredito.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="ArchivoCarga\" />
+    <Folder Include="files\download\" />
+    <Folder Include="files\pdf\" />
+    <Folder Include="files\temp\session\" />
+    <Folder Include="Temporales\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{D500ACFE-8A7F-4727-A0DD-7398E984FAE3}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{139304B2-7BBC-49C4-A018-19C049C09852}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocios\CapaNegocios.csproj">
+      <Project>{8D814E78-515C-43B0-88FF-90936299536A}</Project>
+      <Name>CapaNegocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Code\dsReportes.xsc">
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\dsReportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReportes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Code\dsReportes.xss">
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </None>
+    <None Include="Asset\css\tooltipbutton\bower.json" />
+    <None Include="Asset\css\tooltipbutton\package.json" />
+    <None Include="Asset\css\tooltipbutton\README.md" />
+    <None Include="Asset\css\tooltipbutton\toolbar.jquery.json" />
+    <None Include="Asset\font\cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff" />
+    <None Include="Asset\font\DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff" />
+    <None Include="Asset\font\fontawesome-webfont.eot" />
+    <None Include="Asset\font\fontawesome-webfont.ttf" />
+    <None Include="Asset\font\fontawesome-webfont.woff" />
+    <None Include="Asset\font\FontAwesome.otf" />
+    <None Include="Asset\font\glyphicons-halflings-regular.eot" />
+    <None Include="Asset\font\glyphicons-halflings-regular.ttf" />
+    <None Include="Asset\font\glyphicons-halflings-regular.woff" />
+    <None Include="Asset\graficos_morris.js-0.5.1\.travis.yml" />
+    <None Include="Asset\graficos_morris.js-0.5.1\bower.json" />
+    <None Include="Asset\graficos_morris.js-0.5.1\bower.travis.json" />
+    <None Include="Asset\graficos_morris.js-0.5.1\less\morris.core.less" />
+    <None Include="Asset\graficos_morris.js-0.5.1\lib\morris.area.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\lib\morris.bar.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\lib\morris.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\lib\morris.donut.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\lib\morris.grid.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\lib\morris.hover.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\lib\morris.line.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\package.json" />
+    <None Include="Asset\graficos_morris.js-0.5.1\README.md" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\lib\area\area_spec.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\lib\bar\bar_spec.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\lib\bar\colours.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\lib\commas_spec.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\lib\donut\donut_spec.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\lib\grid\auto_grid_lines_spec.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\lib\grid\set_data_spec.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\lib\grid\y_label_format_spec.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\lib\hover_spec.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\lib\label_series_spec.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\lib\line\line_spec.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\lib\pad_spec.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\lib\parse_time_spec.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\support\placeholder.coffee" />
+    <None Include="Asset\graficos_morris.js-0.5.1\spec\viz\run.sh" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\package.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\README.md" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.accordion.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.autocomplete.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.button.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.core.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.datepicker.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.dialog.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.draggable.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.droppable.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-blind.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-bounce.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-clip.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-drop.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-explode.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-fade.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-fold.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-highlight.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-pulsate.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-scale.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-shake.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-slide.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-transfer.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.effect.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.menu.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.mouse.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.position.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.progressbar.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.resizable.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.selectable.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.slider.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.sortable.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.spinner.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.tabs.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.tooltip.jquery.json" />
+    <None Include="Asset\js\jq-ui\1.10.2\development-bundle\ui.widget.jquery.json" />
+    <Content Include="Servicios\CargaArchivo.ashx" />
+    <Content Include="Digitalizacion\FileDocDB.ashx" />
+    <Content Include="Digitalizacion\FileUpLoadDB.ashx" />
+    <None Include="Asset\toars\toastr.js.map" />
+    <Content Include="Reportes\Asset\css\tooltipbutton\.gitignore" />
+    <Content Include="packages.config" />
+    <None Include="Reportes\Asset\css\tooltipbutton\bower.json" />
+    <None Include="Reportes\Asset\css\tooltipbutton\package.json" />
+    <None Include="Reportes\Asset\css\tooltipbutton\README.md" />
+    <None Include="Reportes\Asset\css\tooltipbutton\toolbar.jquery.json" />
+    <None Include="Reportes\Asset\font\cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff" />
+    <None Include="Reportes\Asset\font\DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff" />
+    <None Include="Reportes\Asset\font\fontawesome-webfont.eot" />
+    <None Include="Reportes\Asset\font\fontawesome-webfont.ttf" />
+    <None Include="Reportes\Asset\font\fontawesome-webfont.woff" />
+    <None Include="Reportes\Asset\font\FontAwesome.otf" />
+    <None Include="Reportes\Asset\font\glyphicons-halflings-regular.eot" />
+    <None Include="Reportes\Asset\font\glyphicons-halflings-regular.ttf" />
+    <None Include="Reportes\Asset\font\glyphicons-halflings-regular.woff" />
+    <Content Include="Reportes\Asset\graficos_morris.js-0.5.1\.gitignore" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\.travis.yml" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\bower.json" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\bower.travis.json" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\less\morris.core.less" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\lib\morris.area.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\lib\morris.bar.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\lib\morris.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\lib\morris.donut.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\lib\morris.grid.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\lib\morris.hover.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\lib\morris.line.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\package.json" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\README.md" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\lib\area\area_spec.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\lib\bar\bar_spec.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\lib\bar\colours.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\lib\commas_spec.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\lib\donut\donut_spec.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\lib\grid\auto_grid_lines_spec.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\lib\grid\set_data_spec.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\lib\grid\y_label_format_spec.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\lib\hover_spec.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\lib\label_series_spec.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\lib\line\line_spec.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\lib\pad_spec.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\lib\parse_time_spec.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\support\placeholder.coffee" />
+    <None Include="Reportes\Asset\graficos_morris.js-0.5.1\spec\viz\run.sh" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\package.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\README.md" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.accordion.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.autocomplete.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.button.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.core.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.datepicker.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.dialog.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.draggable.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.droppable.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-blind.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-bounce.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-clip.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-drop.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-explode.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-fade.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-fold.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-highlight.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-pulsate.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-scale.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-shake.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-slide.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect-transfer.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.effect.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.menu.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.mouse.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.position.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.progressbar.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.resizable.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.selectable.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.slider.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.sortable.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.spinner.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.tabs.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.tooltip.jquery.json" />
+    <None Include="Reportes\Asset\js\jq-ui\1.10.2\development-bundle\ui.widget.jquery.json" />
+    <None Include="Reportes\Asset\toars\toastr.js.map" />
+    <None Include="Reportes\Comisiones.xlsx" />
+    <None Include="Reportes\RepoteInventarioUnidadesFisicaAlmacenes.xlsx" />
+    <None Include="Reportes\RepoteInventarioValorizadoAlmacenes.xlsx" />
+    <None Include="Reportes\RepoteInventarioValorizado.xlsx" />
+    <None Include="Reportes\RepoteInventarioUnidadesFisica.xlsx" />
+    <None Include="Reportes\ReporteComprasMilagros.xlsx" />
+    <None Include="Reportes\ReporteVentasMilagros.xlsx" />
+    <None Include="Reportes\ListaProductos.xlsx" />
+    <None Include="Reportes\Pedido.xlsx" />
+    <None Include="Reportes\PedidosCerrados.xlsx" />
+    <None Include="Reportes\PedidosDespachos.xlsx" />
+    <None Include="Reportes\RegistroVentaProformas.xlsx" />
+    <None Include="Reportes\RegistroVentas.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reportes\rptFacturaImpresionTicketNV_Sticker.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturaImpresionTicketNV_Sticker.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptNotaIngresoSalidaTicket.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNotaIngresoSalidaTicket.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptClientesDeudasYLetras.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptClientesDeudasYLetras.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptCobradosDetalladoGeneral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCobradosDetalladoGeneral.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptElectronica.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptElectronica.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptElectronicaBO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptElectronicaBO.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptElectronicaNC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptElectronicaNC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptGuiaRemisionMilagros.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGuiaRemisionMilagros.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptCotizacionMilagros.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCotizacionMilagros.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptElectronicaBOMilagros.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptElectronicaBOMilagros.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptElectronicaMilagros.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptElectronicaMilagros.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptElectronicaNCMilagros.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptElectronicaNCMilagros.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptFacturaCompra.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturaCompra.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptFacturaImpresionTicketCT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturaImpresionTicketCT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptFacturaImpresionTicketNV.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturaImpresionTicketNV.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptNotaIngresoSalida.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNotaIngresoSalida.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptCobradosDetallado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCobradosDetallado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptFacturaImpresionGRANDE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturaImpresionGRANDE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptFacturaImpresionTicket.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturaImpresionTicket.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptFacturaImpresionTicketNV_Original.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturaImpresionTicketNV_Original.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptGuiaRemision.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGuiaRemision.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptGuiaRemisionImpresionGRANDE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGuiaRemisionImpresionGRANDE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptGuiaRemisionNotaIngresoSalida.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGuiaRemisionNotaIngresoSalida.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptMovimientoCaja.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMovimientoCaja.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptPagos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPagos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptCobradosResumido.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCobradosResumido.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptGuiaRemisionImpresion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGuiaRemisionImpresion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptComprasReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptComprasReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptBoletaImpresion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBoletaImpresion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptComisiones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptComisiones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptNotaPedidoSimple.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNotaPedidoSimple.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptNotaPedido.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNotaPedido.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptControlInterno.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptControlInterno.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptCajaChica.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCajaChica.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptCajaChicaDetalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCajaChicaDetalle.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptChequeImpresionBcp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptChequeImpresionBcp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptChequeImpresionScotiabank.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptChequeImpresionScotiabank.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptCobranzas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCobranzas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptComprobanteCancelacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptComprobanteCancelacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptComprobanteImpresion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptComprobanteImpresion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptCotizacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCotizacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptCotizacionSimple.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCotizacionSimple.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptFacturaImpresion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFacturaImpresion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptHistorialOC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptHistorialOC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptInventarioUnidadesFisicas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInventarioUnidadesFisicas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptLetraImpresion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLetraImpresion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptNotaVenta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNotaVenta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptProforma.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProforma.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptProformaMilagros.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProformaMilagros.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptReporteViaje.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptReporteViaje.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptStickers.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptStickers.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptVentasDiarias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVentasDiarias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptVentasUnidades.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVentasUnidades.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptVistaPreliminarFactura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVistaPreliminarFactura.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptVentasReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVentasReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Web_Reporte_Cobranzas_rptCobradosDetallado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Web_Reporte_Cobranzas_rptCobradosDetallado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Web_Reporte_Cobranzas_rptCobradosResumido.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Web_Reporte_Cobranzas_rptCobradosResumido.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Web_Reporte_Cobranzas_rptCobranzasGrupal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Web_Reporte_Cobranzas_rptCobranzasGrupal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Web_Reporte_Cobranzas_rptCobranzasUnitario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Web_Reporte_Cobranzas_rptCobranzasUnitario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Web_Reporte_Pagos_rptPagos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Web_Reporte_Pagos_rptPagos.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3693</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

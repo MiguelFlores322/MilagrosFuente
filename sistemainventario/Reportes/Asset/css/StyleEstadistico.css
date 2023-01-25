@@ -1,0 +1,74 @@
+﻿  td.subGerenteCell,td.jefeCell
+       {   cursor:pointer; 
+       
+       }
+        table.GridView tr.subGerenteTr td,table.GridView tr.totalTr td
+        {
+            font-weight:bold!important;             
+        }
+        table.GridView tr.jefeTr td
+        {
+            color:#CC33FF!important;
+            font-weight:bold!important;
+        }       
+        table.GridView tr.asesorTr td
+        {
+            color:#05CF69!important; 
+            font-weight:bold!important; 
+        }
+        .subGerenteCell
+        {       
+            font-weight:bold!important;
+            text-decoration:underline;
+                  
+        }
+        .jefeCell
+        {   padding-left:20px!important;    
+            color:#CC33FF!important;
+            font-weight:bold!important;
+            text-decoration:underline;                
+        }   
+        .asesorCell
+        {    
+            color:#05CF69!important;       
+            text-align:right!important;
+            font-weight:bold!important;           
+        } 
+         .empresaCell
+		{
+			 color:#D2691E!important;
+			 text-align:right!important; 
+			 font-weight:bold!important;
+			 
+		} 
+		.jefeCount
+		 {      
+	      color:#CC33FF!important;		 
+		  text-align:center!important;
+		 }
+		 .asesorCount
+		 {
+		  color:#05CF69!important;
+		  font-weight:bold!important;		
+		  text-align:center!important;    
+		 }
+		 .empresaCount
+		 {
+		  color:#D2691E!important;
+		  font-weight:bold!important; 		 
+		  text-align:center!important;
+		 }  
+        .totalCell
+        {
+            text-align:center!important;
+            font-weight:bold!important;
+        }
+        .displayNone
+        {
+            display:none;
+        }
+        
+        .mouseOverTr
+        {
+            background-color: #FBF9EA!important;    
+        }
